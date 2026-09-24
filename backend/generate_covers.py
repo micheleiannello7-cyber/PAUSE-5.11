@@ -12,6 +12,8 @@ Usage:
 import argparse
 import asyncio
 import fcntl
+import io
+import json
 import os
 import sys
 import uuid
@@ -20,12 +22,13 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
+from PIL import Image
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 sys.path.insert(0, str(ROOT_DIR))
 
-from generate_images import generate_image  # noqa: E402
+from generate_images import MODEL, generate_image  # noqa: E402
 from image_prompts import STORY_IMAGE_PROMPTS, LESSON_IMAGE_PROMPTS  # noqa: E402
 from media_opt import upload_cover  # noqa: E402
 
@@ -33,8 +36,25 @@ CONCURRENCY = 3
 STYLE = (
     " Vertical 3:4 composition, dark cinematic editorial mood, magazine-quality photography, "
     "moody premium lighting with subtle cyan/magenta rim light, ultra-detailed, "
+    "one clear subject with realistic textures and natural anatomy, uncluttered background, "
+    "keep the subject within the central safe area and leave dark negative space for the app title, "
     "no text, no letters, no logos, no watermark."
 )
+
+
+def save_original(sid: str, raw: bytes) -> Path:
+    """Keep the paid original recoverable by the existing startup cover sync."""
+    with Image.open(io.BytesIO(raw)) as image:
+        image.load()
+        extension = {"PNG": "png", "JPEG": "jpg", "WEBP": "webp"}.get(image.format)
+        if not extension or min(image.size) < 768 or image.width >= image.height:
+            raise ValueError(f"Cover must be a high-resolution portrait: {image.size}")
+    path = ROOT_DIR / "covers" / f"{sid}.{extension}"
+    path.parent.mkdir(exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_bytes(raw)
+    temporary.replace(path)
+    return path
 
 
 def budget_error(e: Exception) -> bool:
@@ -67,6 +87,7 @@ async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--concurrency", type=int, choices=range(1, 5), default=CONCURRENCY)
     parser.add_argument("--only", help="Comma-separated IDs of confirmed missing/broken covers")
     args = parser.parse_args()
 
@@ -107,14 +128,28 @@ async def main():
         lock.close()
         return
 
-    sem = asyncio.Semaphore(CONCURRENCY)
+    sem = asyncio.Semaphore(args.concurrency)
     stop = asyncio.Event()
-    stats = {"ok": 0, "fail": 0, "consecutive_failures": 0, "stop_reason": None}
+    stats = {"ok": 0, "fail": 0, "skipped": 0, "consecutive_failures": 0, "stop_reason": None}
     run_id = uuid.uuid4().hex
+    report_dir = ROOT_DIR.parent / "memory" / "cover_batches"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    report_path = report_dir / f"{run_id}.json"
+    report = {"id": run_id, "model": MODEL, "total": total, "status": "running",
+              "existing_covers": [d for d in docs if d.get("hero_image_generated") or d.get("hero_image")],
+              "generated": [], "errors": []}
+
+    def checkpoint():
+        report.update(stats)
+        temporary = report_path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(report, ensure_ascii=False, indent=2))
+        temporary.replace(report_path)
+
+    checkpoint()
     await db.cover_generation_runs.insert_one({
         "id": run_id, "total": total, "status": "running",
         "started_at": datetime.now(timezone.utc).isoformat(),
-        "ok": 0, "fail": 0, "generated_ids": [],
+        "ok": 0, "fail": 0, "generated_ids": [], "model": MODEL,
     })
 
     async def one(i, doc):
@@ -125,15 +160,47 @@ async def main():
             if stop.is_set():
                 return
             try:
-                print(f"[{i}/{total}] GEN  {sid}", flush=True)
-                raw, _ = await asyncio.wait_for(
-                    generate_image(f"pause-cover-{run_id}-{sid}", prompt_for(doc)), timeout=180,
-                )
+                current = await db.stories.find_one({"id": sid}, {"_id": 0,
+                    "hero_image_generated": 1, "hero_image": 1})
+                if current is None or current.get("hero_image_generated") or (
+                    only is None and current.get("hero_image")
+                ):
+                    stats["skipped"] += 1
+                    checkpoint()
+                    return
+                # Retry uploads from saved originals without paying to generate again.
+                originals = [p for p in (ROOT_DIR / "covers").glob(f"{sid}.*")
+                             if p.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp")]
+                prompt = prompt_for(doc)
+                if originals:
+                    raw = originals[0].read_bytes()
+                    source = originals[0]
+                    print(f"[{i}/{total}] RECOVER {sid}", flush=True)
+                else:
+                    print(f"[{i}/{total}] GEN  {sid}", flush=True)
+                    raw, _ = await asyncio.wait_for(
+                        generate_image(f"pause-cover-{run_id}-{sid}", prompt), timeout=240,
+                    )
+                    source = save_original(sid, raw)
                 fields = await asyncio.to_thread(upload_cover, sid, raw)
                 fields["hero_generated_at"] = datetime.now(timezone.utc).isoformat()
-                await db.stories.update_one({"id": sid}, {"$set": fields})
+                # Compare-and-set also protects covers changed while the AI was working.
+                result = await db.stories.update_one(
+                    {"id": sid, "hero_image_generated": {"$in": [None, ""]},
+                     "hero_image": current.get("hero_image")}, {"$set": fields},
+                )
+                if not result.modified_count:
+                    # A concurrently supplied cover wins, including at the next startup.
+                    if not originals:
+                        source.replace(report_dir / source.name)
+                    stats["skipped"] += 1
+                    checkpoint()
+                    return
                 stats["ok"] += 1
                 stats["consecutive_failures"] = 0
+                report["generated"].append({"id": sid, "title": doc.get("title"),
+                    "prompt": prompt, "source_file": str(source.relative_to(ROOT_DIR.parent)), **fields})
+                checkpoint()
                 await db.cover_generation_runs.update_one({"id": run_id}, {
                     "$inc": {"ok": 1}, "$push": {"generated_ids": sid},
                 })
@@ -141,6 +208,7 @@ async def main():
             except Exception as e:  # noqa: BLE001
                 stats["fail"] += 1
                 stats["consecutive_failures"] += 1
+                report["errors"].append({"id": sid, "type": type(e).__name__})
                 await db.cover_generation_runs.update_one({"id": run_id}, {"$inc": {"fail": 1}})
                 print(f"[{i}/{total}] FAIL {sid}: {str(e)[:160]}", flush=True)
                 if budget_error(e):
@@ -153,9 +221,12 @@ async def main():
                 elif stats["consecutive_failures"] >= 3:
                     stats["stop_reason"] = "repeated_errors"
                     stop.set()
+                checkpoint()
 
     await asyncio.gather(*(one(i, d) for i, d in enumerate(todo, 1)))
     print(f"[done] ok={stats['ok']} fail={stats['fail']} stopped={stop.is_set()}", flush=True)
+    report["status"] = "stopped" if stop.is_set() else "completed"
+    checkpoint()
     await db.cover_generation_runs.update_one({"id": run_id}, {"$set": {
         "status": "stopped" if stop.is_set() else "completed",
         "finished_at": datetime.now(timezone.utc).isoformat(), **stats,

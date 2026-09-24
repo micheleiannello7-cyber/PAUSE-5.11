@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Query, Request, Response
+from fastapi import FastAPI, APIRouter, HTTPException, Query, Request, Response, Depends
 from fastapi.responses import FileResponse
 from starlette.concurrency import run_in_threadpool
 from dotenv import load_dotenv
@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 import uuid
 from datetime import datetime, timezone, timedelta
+from optional_services import check_optional_services
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -23,7 +24,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 app = FastAPI(title="PAUSE API")
-api_router = APIRouter(prefix="/api")
+api_router = APIRouter(prefix="/api", dependencies=[Depends(check_optional_services)])
 
 logger = logging.getLogger(__name__)
 
@@ -308,7 +309,7 @@ async def ensure_seed():
     for s in ALL_STORIES:
         existing = await db.stories.find_one(
             {"id": s["id"]},
-            {"_id": 0, "hero_image_generated": 1, "hero_image_thumb": 1, "chapters_v6": 1, "chapters": 1, "translations": 1,
+            {"_id": 0, "hero_image": 1, "hero_image_generated": 1, "hero_image_thumb": 1, "chapters_v6": 1, "chapters": 1, "translations": 1,
              "reading_time_min": 1, "deep_dive_time_min": 1, "content_trimmed": 1, "hook": 1, "summary": 1},
         )
         payload = {k: v for k, v in s.items()}
@@ -318,6 +319,9 @@ async def ensure_seed():
         if existing and existing.get("hero_image_generated"):
             payload["hero_image_generated"] = existing["hero_image_generated"]
             payload["hero_image_thumb"] = existing.get("hero_image_thumb")
+            # Keep the reviewed fallback (including intentionally empty values).
+            # Re-seeding must not revive an off-topic photo beneath a new cover.
+            payload["hero_image"] = existing.get("hero_image", "")
         if existing and existing.get("content_trimmed"):
             # Editorial trim (trim_stories.py) is the current text: never let
             # the seed files put the long version back.

@@ -1,0 +1,1625 @@
+{
+  "id": "066aa39e04aa40cb9a0d227e74a7b845",
+  "model": "gemini-3.1-flash-image-preview",
+  "total": 3,
+  "status": "completed",
+  "existing_covers": [
+    {
+      "id": "sky-blue-sunset-orange",
+      "category_name": "Scienza · Natura",
+      "hero_image": "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Lo stesso cielo, colori diversi. Non è magia, ma una questione di luce, atmosfera e lunghezza delle onde luminose.",
+      "kind": "story",
+      "title": "Perché il cielo è blu e il tramonto è arancione?"
+    },
+    {
+      "id": "why-we-yawn",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è solo sonno o noia: lo sbadiglio è uno dei riflessi più misteriosi del nostro corpo, e ci lega agli altri più di quanto pensi.",
+      "kind": "story",
+      "title": "Perché sbadigliamo (e perché è contagioso)?",
+      "hero_image_generated": "pause/hero/why-we-yawn-d196712ce213.webp"
+    },
+    {
+      "id": "black-holes-basics",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non sono buchi, non sono neri e non 'succhiano' tutto. Ma sono forse la cosa più affascinante e strana dell'universo.",
+      "kind": "story",
+      "title": "Cos'è davvero un buco nero?",
+      "hero_image_generated": "pause/hero/black-holes-basics-732802ba8d30.webp"
+    },
+    {
+      "id": "mars-red",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1630839437035-dac17da580d0?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Il pianeta che ci osserva da sempre deve il suo colore a un dettaglio che conosciamo bene anche sulla Terra: la ruggine.",
+      "kind": "story",
+      "title": "Perché Marte è rosso?",
+      "hero_image_generated": "pause/hero/mars-red-289dcd2122d7.webp"
+    },
+    {
+      "id": "how-oled-works",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1601944179066-29786cb9d32a?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Perché i neri di un OLED sembrano davvero neri, e perché i colori bruciano di più? Tutto parte da come nasce la luce nel display.",
+      "kind": "story",
+      "title": "Come funziona uno schermo OLED?",
+      "hero_image_generated": "pause/hero/how-oled-works-373ba690c749.webp"
+    },
+    {
+      "id": "how-wifi-works",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è magia, non è invisibile. Il Wi-Fi è luce che semplicemente non riesci a vedere, e sfida i muri di casa tua ogni giorno.",
+      "kind": "story",
+      "title": "Come fa il Wi-Fi ad attraversare i muri?",
+      "hero_image_generated": "pause/hero/how-wifi-works-974cdb36ee92.webp"
+    },
+    {
+      "id": "bees-communicate",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1568526381923-caf3fd520382?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Nell'alveare non c'è confusione: c'è un vero linguaggio, fatto di danze, vibrazioni e profumi. E funziona meglio del nostro GPS.",
+      "kind": "story",
+      "title": "Come fanno le api a parlarsi?"
+    },
+    {
+      "id": "octopus-brains",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è una leggenda del web: il polpo ha un modo di 'pensare' che assomiglia più a un collettivo che a un individuo.",
+      "kind": "story",
+      "title": "Il polpo ha davvero otto cervelli?",
+      "hero_image_generated": "pause/hero/octopus-brains-8585640c30dc.webp"
+    },
+    {
+      "id": "why-romans-fell",
+      "category_name": "Storia",
+      "hero_image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è caduto in un giorno. Non è caduto per un motivo solo. E in un certo senso, non è mai davvero finito.",
+      "kind": "story",
+      "title": "Perché è crollato l'Impero Romano?"
+    },
+    {
+      "id": "brain-doesnt-see",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ciò che chiami 'vedere' è in realtà una previsione, un montaggio, una storia che il tuo cervello ti racconta in tempo reale.",
+      "kind": "story",
+      "title": "Perché il tuo cervello non vede davvero il mondo"
+    },
+    {
+      "id": "why-time-flies",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un'ora in coda alla posta dura una settimana. Un weekend con gli amici dura mezz'ora. Il tempo esiste, ma tu lo percepisci in modo bizzarro.",
+      "kind": "story",
+      "title": "Perché il tempo vola quando ti diverti?"
+    },
+    {
+      "id": "espresso-italian",
+      "category_name": "Cultura",
+      "hero_image": "https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un rituale di 30 secondi che il resto del mondo prova a copiare e non ci riesce mai davvero. Il segreto? Non è solo il caffè.",
+      "kind": "story",
+      "title": "Perché l'espresso è solo italiano?"
+    },
+    {
+      "id": "why-we-sleep",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ogni notte perdi coscienza per ore. Sembra un difetto evolutivo. In realtà è forse l'invenzione biologica più importante che hai a disposizione.",
+      "kind": "story",
+      "title": "Perché passiamo un terzo della vita a dormire?"
+    },
+    {
+      "id": "aurora-borealis",
+      "category_name": "Natura",
+      "hero_image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è nebbia, non è un riflesso: è una tempesta solare che dipinge il cielo. E ha bisogno di un miracolo silenzioso: il campo magnetico della Terra.",
+      "kind": "story",
+      "title": "Come si accende un'aurora boreale?"
+    },
+    {
+      "id": "why-yawn-cat",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Il suono più rilassante del pianeta è anche uno dei più misteriosi. E fa più cose di quanto immagini.",
+      "kind": "story",
+      "title": "Perché i gatti fanno le fusa?"
+    },
+    {
+      "id": "gravity-newton-einstein",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ci fa cadere le mele in testa e tiene la Luna in orbita. Ma la gravità non è ciò che pensavi.",
+      "kind": "story",
+      "title": "Cos'è davvero la gravità?"
+    },
+    {
+      "id": "how-dna-works",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Due metri di stringhe chimiche in ogni cellula del tuo corpo contengono le istruzioni per costruirti.",
+      "kind": "story",
+      "title": "Cos'è il DNA e come ti fa essere te?",
+      "hero_image_generated": "pause/hero/how-dna-works-2310de13d151.webp"
+    },
+    {
+      "id": "quantum-basics",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop",
+      "hook": "La realtà, alle scale più piccole, non funziona come pensi. Ma anche il tuo telefono la usa.",
+      "kind": "story",
+      "title": "Cos'è la fisica quantistica in parole semplici?",
+      "hero_image_generated": "pause/hero/quantum-basics-07337f1bce00.webp"
+    },
+    {
+      "id": "why-evolution",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1471520201477-47a62a269a87?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è una scala verso l'uomo. È un albero che si ramifica da 4 miliardi di anni, e siamo solo un ramoscello.",
+      "kind": "story",
+      "title": "Come funziona l'evoluzione (davvero)?",
+      "hero_image_generated": "pause/hero/why-evolution-5841ef1d3068.webp"
+    },
+    {
+      "id": "why-water-strange",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=1200&q=80&auto=format&fit=crop",
+      "hook": "La sostanza più comune del pianeta è anche la più anomala che esista. E la vita esiste grazie alle sue stranezze.",
+      "kind": "story",
+      "title": "Perché l'acqua è così strana?",
+      "hero_image_generated": "pause/hero/why-water-strange-fd6440504fb9.webp"
+    },
+    {
+      "id": "photosynthesis-basics",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ogni foglia è una piccola centrale energetica che trasforma la luce del Sole in zucchero. E in cambio, ossigena l'atmosfera.",
+      "kind": "story",
+      "title": "Come fanno le piante a mangiare la luce?"
+    },
+    {
+      "id": "why-magnets",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1614729375293-74e5cf67ebc3?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non c'è nessuna forza misteriosa. C'è un esercito invisibile di piccoli elettroni che marciano tutti nella stessa direzione.",
+      "kind": "story",
+      "title": "Perché i magneti attirano il ferro?",
+      "hero_image_generated": "pause/hero/why-magnets-46066ba9b847.webp"
+    },
+    {
+      "id": "why-rain-falls",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un ciclo silenzioso che l'acqua ripete da miliardi di anni. Il tuo bicchiere di stamattina probabilmente ha bevuto un T-Rex.",
+      "kind": "story",
+      "title": "Come nasce la pioggia?",
+      "hero_image_generated": "pause/hero/why-rain-falls-6e86991dcb2a.webp"
+    },
+    {
+      "id": "chemistry-basics",
+      "category_name": "Scienza",
+      "hero_image": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=1200&q=80&auto=format&fit=crop",
+      "hook": "L'unità di tutto: sedie, aria, stelle, te. Ma se guardi da vicino è quasi tutta spazio vuoto.",
+      "kind": "story",
+      "title": "Cos'è davvero un atomo?"
+    },
+    {
+      "id": "moon-tides",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1522434860430-f1cef8b9ea60?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Alta e bassa marea due volte al giorno. Non è caso: è la Luna che ti tira delicatamente per i piedi.",
+      "kind": "story",
+      "title": "Perché la Luna fa muovere il mare?",
+      "hero_image_generated": "pause/hero/moon-tides-45bd1b7d247f.webp"
+    },
+    {
+      "id": "how-stars-die",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Le stelle non brillano per sempre. E quando muoiono, spesso lo fanno con esplosioni visibili a distanze inimmaginabili.",
+      "kind": "story",
+      "title": "Come muore una stella?",
+      "hero_image_generated": "pause/hero/how-stars-die-6101f71da047.webp"
+    },
+    {
+      "id": "why-sun-shines",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non brucia legna né gas. Il Sole è una bomba a idrogeno controllata dalla sua stessa gravità.",
+      "kind": "story",
+      "title": "Come fa il Sole a brillare da 5 miliardi di anni?",
+      "hero_image_generated": "pause/hero/why-sun-shines-e27e45bd63c9.webp"
+    },
+    {
+      "id": "how-many-galaxies",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Prova a contare le stelle di notte. Ogni singola galassia ne contiene miliardi. Poi moltiplica per due trilioni.",
+      "kind": "story",
+      "title": "Quante galassie ci sono nell'universo?",
+      "hero_image_generated": "pause/hero/how-many-galaxies-80eb9febe467.webp"
+    },
+    {
+      "id": "how-iss-works",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un laboratorio grande come un campo di calcio orbita da oltre 25 anni sopra le nostre teste, a 400 km d'altezza.",
+      "kind": "story",
+      "title": "Come funziona la Stazione Spaziale Internazionale?",
+      "hero_image_generated": "pause/hero/how-iss-works-2a80d3286236.webp"
+    },
+    {
+      "id": "big-bang-basics",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è un'esplosione. Non è avvenuto in un posto. Ed è il momento in cui è nato lo spazio-tempo.",
+      "kind": "story",
+      "title": "Cos'è il Big Bang, in parole semplici?"
+    },
+    {
+      "id": "why-comets-tails",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non sono \"stelle cadenti\": sono palle di ghiaccio sporco che, avvicinandosi al Sole, sputano una scia visibile a milioni di chilometri.",
+      "kind": "story",
+      "title": "Perché le comete hanno la coda?",
+      "hero_image_generated": "pause/hero/why-comets-tails-474d8cfb9a56.webp"
+    },
+    {
+      "id": "exoplanets-basics",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ne abbiamo trovati oltre 5.000. Almeno alcuni potrebbero avere oceani, atmosfere e forse anche più.",
+      "kind": "story",
+      "title": "Ci sono altri pianeti come la Terra?",
+      "hero_image_generated": "pause/hero/exoplanets-basics-7b306236bee4.webp"
+    },
+    {
+      "id": "how-gps-works",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un piccolo miracolo in tasca: 24 satelliti a 20.000 km d'altezza ti localizzano al metro. E sfruttano Einstein.",
+      "kind": "story",
+      "title": "Come fa il GPS a sapere dove sei?"
+    },
+    {
+      "id": "how-batteries-work",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1494212088344-91b18d9d4c11?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è un serbatoio pieno di elettricità: è un piccolo laboratorio chimico che trasforma reazioni in corrente.",
+      "kind": "story",
+      "title": "Come fa una batteria a conservare energia?",
+      "hero_image_generated": "pause/hero/how-batteries-work-0d12935827e7.webp"
+    },
+    {
+      "id": "how-internet-works",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è una nuvola. È una rete di cavi di vetro sottomarini che uniscono i continenti alla velocità della luce.",
+      "kind": "story",
+      "title": "Come funziona davvero internet?"
+    },
+    {
+      "id": "how-encryption-works",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Anche se qualcuno intercettasse i tuoi messaggi, vedrebbe solo caratteri illeggibili. Ecco la magia della crittografia.",
+      "kind": "story",
+      "title": "Come fa WhatsApp a essere davvero privato?"
+    },
+    {
+      "id": "how-ai-learns",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è magia e non è \"pensiero\". È matematica: miliardi di parametri che si aggiustano finché non trovano gli schemi giusti.",
+      "kind": "story",
+      "title": "Come fa un'AI a imparare?",
+      "hero_image_generated": "pause/hero/how-ai-learns-8452737cb2b7.webp"
+    },
+    {
+      "id": "why-smartphones-fast",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un dispositivo che entra in tasca oggi è più veloce del supercomputer che portò l'uomo sulla Luna, di miliardi di volte.",
+      "kind": "story",
+      "title": "Perché uno smartphone è più potente di un PC di 20 anni fa?"
+    },
+    {
+      "id": "what-is-blockchain",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un registro digitale condiviso che nessuno può modificare da solo. Serve a Bitcoin, ma potrebbe cambiare molto altro.",
+      "kind": "story",
+      "title": "Cos'è la blockchain, in parole normali?"
+    },
+    {
+      "id": "how-3d-printing",
+      "category_name": "Tecnologia",
+      "hero_image": "https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non stampa: costruisce, strato dopo strato, come una pila di sottilissimi pancake. E può fare protesi, case, cibo, organi.",
+      "kind": "story",
+      "title": "Come fa una stampante 3D a creare oggetti dal nulla?",
+      "hero_image_generated": "pause/hero/how-3d-printing-0c682488cf78.webp"
+    },
+    {
+      "id": "how-trees-live",
+      "category_name": "Natura",
+      "hero_image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Alcuni alberi sono più vecchi delle piramidi. Hanno un trucco che gli animali non hanno mai avuto.",
+      "kind": "story",
+      "title": "Come fa un albero a vivere così a lungo?"
+    },
+    {
+      "id": "why-oceans-salty",
+      "category_name": "Natura",
+      "hero_image": "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Milioni di fiumi scaricano acqua dolce nell'oceano ogni secondo. Eppure il mare resta salato. Come mai?",
+      "kind": "story",
+      "title": "Perché il mare è salato ma i fiumi no?"
+    },
+    {
+      "id": "why-dogs-love-us",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è per il cibo. È il risultato di 30.000 anni di co-evoluzione uomo-cane. E il tuo cane lo sente più di quanto pensi.",
+      "kind": "story",
+      "title": "Perché i cani ci amano così tanto?"
+    },
+    {
+      "id": "bird-migration",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Ogni anno miliardi di uccelli attraversano continenti. E arrivano precisi al metro. Senza mappe, senza GPS.",
+      "kind": "story",
+      "title": "Come fanno gli uccelli migratori a non perdersi?"
+    },
+    {
+      "id": "penguins-cold",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Vivono a -50°C senza problemi. Il loro segreto? Un'ingegneria termica che le case moderne stanno solo ora imitando.",
+      "kind": "story",
+      "title": "Come fanno i pinguini a non congelare?"
+    },
+    {
+      "id": "egyptian-pyramids",
+      "category_name": "Storia",
+      "hero_image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non da schiavi. Non da alieni. Da operai pagati, con tecniche che stiamo capendo solo ora, 4.500 anni dopo.",
+      "kind": "story",
+      "title": "Come furono costruite le piramidi?"
+    },
+    {
+      "id": "why-we-dream",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non sono profezie né rumore casuale. Ogni notte il tuo cervello ti manda in un teatro segreto, con un motivo preciso.",
+      "kind": "story",
+      "title": "A cosa servono davvero i sogni?"
+    },
+    {
+      "id": "procrastination",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è pigrizia. È il modo in cui il tuo cervello fugge dalle emozioni scomode. E c'è un modo per fregarlo.",
+      "kind": "story",
+      "title": "Perché rimandiamo sempre le cose importanti?"
+    },
+    {
+      "id": "fear-basics",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1541199249251-f713e6145474?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un sistema di allarme antichissimo. Utile per sopravvivere ai leoni, meno per superare un colloquio di lavoro.",
+      "kind": "story",
+      "title": "Cos'è davvero la paura?"
+    },
+    {
+      "id": "memory-basics",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è che perdi i ricordi. È che il tuo cervello sceglie con cura cosa tenere. E ogni ricordo che riprendi lo riscrive.",
+      "kind": "story",
+      "title": "Perché dimentichiamo (e come funziona la memoria)?"
+    },
+    {
+      "id": "empathy-basics",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un superpotere sociale che alcuni cervelli hanno di serie, altri devono coltivare. E che sta scomparendo dagli anni '90.",
+      "kind": "story",
+      "title": "Cos'è l'empatia (e perché non ce l'hanno tutti)?"
+    },
+    {
+      "id": "how-skin-works",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Due metri quadrati di sensore, scudo, termoregolatore, laboratorio. E si rinnova completamente ogni mese.",
+      "kind": "story",
+      "title": "Perché la pelle è l'organo più straordinario?"
+    },
+    {
+      "id": "how-taste-works",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1533640924469-f04e06f8898d?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Dolce, salato, aspro, amaro, umami. Il gusto è chimica pura, ma ciò che chiamiamo \"sapore\" è per lo più naso.",
+      "kind": "story",
+      "title": "Perché i sapori non sono solo 5 (o forse sì)?"
+    },
+    {
+      "id": "blood-basics",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Un fiume di 5 litri che scorre nel tuo corpo, che consegna ossigeno, combatte infezioni, ripara ferite e ti tiene in vita ogni secondo.",
+      "kind": "story",
+      "title": "Cosa c'è davvero nel tuo sangue?"
+    },
+    {
+      "id": "why-many-languages",
+      "category_name": "Cultura",
+      "hero_image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&q=80&auto=format&fit=crop",
+      "hook": "7.000 lingue nel mondo. Alcune sono cugine, altre estranee. Dietro c'è una storia di viaggi, isolamento e invenzioni geniali.",
+      "kind": "story",
+      "title": "Perché parliamo lingue così diverse?"
+    },
+    {
+      "id": "chess-history",
+      "category_name": "Cultura",
+      "hero_image": "https://images.unsplash.com/photo-1560174038-da43ac74f01b?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Nati in India, cresciuti in Persia, perfezionati in Europa. Un gioco che riflette guerra, matematica e psicologia.",
+      "kind": "story",
+      "title": "Perché gli scacchi affascinano da 1500 anni?"
+    },
+    {
+      "id": "geo-why-deserts",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non solo sabbia rovente: esistono deserti gelidi e deserti costieri. La loro posizione sulla Terra non è casuale, ma segue regole precise del clima.",
+      "kind": "story",
+      "title": "Perché i deserti si formano dove si formano?"
+    },
+    {
+      "id": "geo-why-travel",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Non è solo relax o foto da mostrare. Viaggiare, quando lo facciamo bene, lascia un segno profondo su come pensiamo e vediamo il mondo. Ecco perché.",
+      "kind": "story",
+      "title": "Perché viaggiare ci cambia davvero?"
+    },
+    {
+      "id": "sto-great-wall",
+      "category_name": "Storia",
+      "hero_image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80&auto=format&fit=crop",
+      "hook": "È una delle 'verità' più ripetute al mondo: l'unica opera umana visibile dallo spazio. Peccato che sia, quasi del tutto, una leggenda.",
+      "kind": "story",
+      "title": "La Grande Muraglia si vede davvero dallo spazio?"
+    },
+    {
+      "id": "sto-spices",
+      "category_name": "Storia",
+      "hero_image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Pepe, cannella, noce moscata: oggi in ogni cucina, un tempo valevano quanto l'oro. Per queste polveri profumate si scoprirono continenti e si combatterono guerre.",
+      "kind": "story",
+      "title": "Perché le spezie hanno cambiato la storia del mondo?"
+    },
+    {
+      "id": "cor-gut-brain",
+      "category_name": "Corpo umano",
+      "hero_image": "https://images.unsplash.com/photo-1533640924469-f04e06f8898d?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Le farfalle nello stomaco, le decisioni 'di pancia'. Non sono solo modi di dire: l'intestino ha una rete nervosa propria che dialoga di continuo con la testa.",
+      "kind": "story",
+      "title": "Il 'secondo cervello' nascosto nella pancia"
+    },
+    {
+      "id": "cul-why-clink-glasses",
+      "category_name": "Cultura",
+      "hero_image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Alziamo i bicchieri, li facciamo tintinnare e beviamo insieme. Un rito allegro e universale che nasconde origini tra superstizione e convivialità.",
+      "kind": "story",
+      "title": "Perché brindiamo dicendo 'cin cin'?"
+    },
+    {
+      "id": "cul-language-shapes",
+      "category_name": "Cultura",
+      "hero_image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Alcune lingue non hanno parole per 'destra' e 'sinistra', altre hanno decine di termini per la neve. Le parole che usiamo modellano davvero la nostra mente?",
+      "kind": "story",
+      "title": "La lingua che parliamo cambia il modo in cui pensiamo?"
+    },
+    {
+      "id": "ani-bee-dance",
+      "category_name": "Animali",
+      "hero_image": "https://images.unsplash.com/photo-1568526381923-caf3fd520382?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Come fa un'ape a dire alle compagne dove trovare i fiori migliori, magari a chilometri di distanza? Con una danza. Un vero linguaggio fatto di movimenti.",
+      "kind": "story",
+      "title": "La danza segreta delle api"
+    },
+    {
+      "id": "psi-placebo",
+      "category_name": "Psicologia",
+      "hero_image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Una pillola senza principio attivo che allevia il dolore, un finto trattamento che funziona. Non è inganno: è la prova del potere della mente sul corpo.",
+      "kind": "story",
+      "title": "L'effetto placebo: come una pillola finta può curare davvero"
+    },
+    {
+      "id": "v4-ghiaccio-galleggia",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Quasi tutti i solidi affondano nel proprio liquido. L'acqua fa il contrario, e senza questa stranezza la vita sulla Terra sarebbe molto diversa.",
+      "kind": "story",
+      "title": "Perché il ghiaccio galleggia sull'acqua?",
+      "hero_image_generated": "pause/hero/v4-ghiaccio-galleggia-58d6d5ee37c3.webp"
+    },
+    {
+      "id": "v4-sale-neve",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Camion che spargono sale prima di una nevicata: un gesto semplice che nasconde una legge fisica valida per ogni liquido.",
+      "kind": "story",
+      "title": "Perché il sale scioglie la neve sulle strade?",
+      "hero_image_generated": "pause/hero/v4-sale-neve-dd55895f31ad.webp"
+    },
+    {
+      "id": "v4-microonde",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Il piatto esce bollente, ma il forno resta freddo. Dentro quella scatola non c'è fuoco: c'è una radio potente sintonizzata sull'acqua.",
+      "kind": "story",
+      "title": "Come fa il microonde a scaldare il cibo senza scaldarsi?",
+      "hero_image_generated": "pause/hero/v4-microonde-e36d0b3a4095.webp"
+    },
+    {
+      "id": "v4-luna-stessa-faccia",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Da millenni l'umanità osserva lo stesso volto lunare. Il lato nascosto è stato fotografato solo nel 1959. Eppure la Luna ruota.",
+      "kind": "story",
+      "title": "Perché vediamo sempre la stessa faccia della Luna?",
+      "hero_image_generated": "pause/hero/v4-luna-stessa-faccia-a09eec1c8755.webp"
+    },
+    {
+      "id": "v4-giorno-venere",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Il pianeta più simile alla Terra per dimensioni ha un calendario che sembra uno scherzo: gira su se stesso più lentamente di quanto giri intorno al Sole.",
+      "kind": "story",
+      "title": "Su Venere un giorno dura più di un anno",
+      "hero_image_generated": "pause/hero/v4-giorno-venere-4433c0ea93e8.webp"
+    },
+    {
+      "id": "v4-fascia-asteroidi",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Nei film le astronavi schivano rocce a raffica. Nella realtà una sonda attraversa la fascia degli asteroidi senza nemmeno accorgersene.",
+      "kind": "story",
+      "title": "La fascia degli asteroidi non è un campo minato",
+      "hero_image_generated": "pause/hero/v4-fascia-asteroidi-12ab1c00df2c.webp"
+    },
+    {
+      "id": "v4-touchscreen",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Funziona con la punta delle dita ma non con i guanti né con una matita. Il segreto non è la pressione: è l'elettricità che hai nel corpo.",
+      "kind": "story",
+      "title": "Come fa il touchscreen a sentire il tuo dito?",
+      "hero_image_generated": "pause/hero/v4-touchscreen-4c1dc9e4bb64.webp"
+    },
+    {
+      "id": "v4-gps",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Ventiquattro satelliti, orologi atomici e una correzione che sembra fantascienza: senza tenere conto della curvatura del tempo, il navigatore sbaglierebbe di chilometri.",
+      "kind": "story",
+      "title": "Il GPS funziona grazie alla relatività di Einstein",
+      "hero_image_generated": "pause/hero/v4-gps-e7cb7fc7f0c2.webp"
+    },
+    {
+      "id": "v4-cavi-sottomarini",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Pensiamo ai satelliti, ma il 99% del traffico tra continenti scorre in cavi spessi come un tubo da giardino posati sul fondo degli oceani.",
+      "kind": "story",
+      "title": "Internet viaggia in fondo al mare, non nello spazio",
+      "hero_image_generated": "pause/hero/v4-cavi-sottomarini-86c6ecac44e7.webp"
+    },
+    {
+      "id": "v4-foglie-autunno",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Rosso, giallo, arancione: i colori d'autunno non vengono creati dall'albero. In parte erano lì da sempre, nascosti.",
+      "kind": "story",
+      "title": "Perché le foglie cambiano colore in autunno?",
+      "hero_image_generated": "pause/hero/v4-foglie-autunno-d331c7789070.webp"
+    },
+    {
+      "id": "v4-fulmini",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Dura meno di un secondo, scalda l'aria a cinque volte la temperatura del Sole e colpisce la Terra 100 volte al secondo. E parte quasi sempre dal basso.",
+      "kind": "story",
+      "title": "Cosa succede davvero in un fulmine",
+      "hero_image_generated": "pause/hero/v4-fulmini-55e048d6820b.webp"
+    },
+    {
+      "id": "v4-funghi-rete",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Nel bosco gli alberi non sono individui isolati: scambiano zuccheri, acqua e segnali di allarme attraverso una rete sotterranea di filamenti fungini.",
+      "kind": "story",
+      "title": "Sotto i tuoi piedi c'è un internet di funghi",
+      "hero_image_generated": "pause/hero/v4-funghi-rete-16aa323c07ed.webp"
+    },
+    {
+      "id": "v4-lez-densita",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Una nave di acciaio galleggia, un chiodo affonda. Non è il peso a decidere: è un rapporto che puoi imparare in quattro passi.",
+      "kind": "lesson",
+      "title": "Densità: perché le cose galleggiano o affondano",
+      "hero_image_generated": "pause/hero/v4-lez-densita-f2f5c0adc4c7.webp"
+    },
+    {
+      "id": "v4-lez-atomo",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Tutto ciò che tocchi è fatto di atomi, eppure sono quasi interamente vuoti. Ecco come immaginarli in modo corretto in quattro passi.",
+      "kind": "lesson",
+      "title": "Com'è fatto un atomo, spiegato senza formule",
+      "hero_image_generated": "pause/hero/v4-lez-atomo-d6cb68060ee9.webp"
+    },
+    {
+      "id": "v4-lez-fasi-luna",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Non è l'ombra della Terra. È solo una questione di angoli tra tre corpi. In quattro passi imparerai a leggere la Luna come un orologio.",
+      "kind": "lesson",
+      "title": "Le fasi della Luna: capirle una volta per tutte",
+      "hero_image_generated": "pause/hero/v4-lez-fasi-luna-85cc62e0cbba.webp"
+    },
+    {
+      "id": "v4-lez-anno-luce",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Non è un tempo, è una distanza. E capirlo cambia il modo in cui guardi il cielo: stai vedendo il passato.",
+      "kind": "lesson",
+      "title": "Anno luce: come misurare distanze che non si possono percorrere",
+      "hero_image_generated": "pause/hero/v4-lez-anno-luce-1d0fffecaf18.webp"
+    },
+    {
+      "id": "v4-lez-riconoscere-phishing",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Le truffe via email non sono più piene di errori di ortografia. Ma lasciano sempre quattro indizi, se sai dove guardare.",
+      "kind": "lesson",
+      "title": "Riconoscere un'email di phishing in 4 controlli",
+      "hero_image_generated": "pause/hero/v4-lez-riconoscere-phishing-807c8388b3b5.webp"
+    },
+    {
+      "id": "v4-lez-cloud",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Le tue foto non stanno in una nuvola. Stanno in un capannone, su dischi rigidi, copiate più volte. Ecco come funziona in quattro passi.",
+      "kind": "lesson",
+      "title": "Cosa significa davvero 'salvato nel cloud'",
+      "hero_image_generated": "pause/hero/v4-lez-cloud-bd37e9d34ccd.webp"
+    },
+    {
+      "id": "v4-lez-fotosintesi",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Ogni boccone che mangi e ogni respiro che fai dipendono da una reazione che avviene in silenzio dentro le foglie.",
+      "kind": "lesson",
+      "title": "La fotosintesi in 4 passi: come una foglia fa il cibo dalla luce",
+      "hero_image_generated": "pause/hero/v4-lez-fotosintesi-843ae5fc49bb.webp"
+    },
+    {
+      "id": "v4-lez-orientarsi-natura",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Il telefono è scarico e non conosci la zona. Sole, ombre, muschio e stelle possono dirti dove sei rivolto, se sai leggerli.",
+      "kind": "lesson",
+      "title": "Orientarsi senza bussola: 4 indizi che la natura ti dà",
+      "hero_image_generated": "pause/hero/v4-lez-orientarsi-natura-8b28cd97cf6c.webp"
+    },
+    {
+      "id": "v4-polpo-cervelli",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Sa aprire barattoli, riconoscere le persone e cambiare colore in un istante. Ed è un mollusco, parente delle lumache.",
+      "kind": "story",
+      "title": "Il polpo ha nove cervelli e tre cuori",
+      "hero_image_generated": "pause/hero/v4-polpo-cervelli-8524fd509080.webp"
+    },
+    {
+      "id": "v4-migrazione-anguille",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Per 2.000 anni nessuno ha mai visto un'anguilla riprodursi. Aristotele pensava nascessero dal fango. La verità è ancora più strana.",
+      "kind": "story",
+      "title": "Il mistero delle anguille che nascono in mezzo all'Atlantico",
+      "hero_image_generated": "pause/hero/v4-migrazione-anguille-5d5d78027d7f.webp"
+    },
+    {
+      "id": "v4-cane-naso",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Non annusa solo cosa è passato di lì: sa da quanto. E dal fiato può capire se sei nervoso, malato o incinta.",
+      "kind": "story",
+      "title": "Il naso di un cane può sentire il tempo",
+      "hero_image_generated": "pause/hero/v4-cane-naso-f9e96ac4f99e.webp"
+    },
+    {
+      "id": "v4-biblioteca-alessandria",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "L'immagine di un incendio che cancella il sapere antico è potente ma sbagliata. La fine della biblioteca più famosa fu molto più lenta e più banale.",
+      "kind": "story",
+      "title": "La Biblioteca di Alessandria non bruciò in una notte",
+      "hero_image_generated": "pause/hero/v4-biblioteca-alessandria-46c788534801.webp"
+    },
+    {
+      "id": "v4-cleopatra-piramidi",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "La immaginiamo tra i faraoni e le sfingi. Ma quando Cleopatra nacque, la Grande Piramide era già un monumento antico di 2.500 anni.",
+      "kind": "story",
+      "title": "Cleopatra era più vicina a noi che alle piramidi",
+      "hero_image_generated": "pause/hero/v4-cleopatra-piramidi-7d1646946272.webp"
+    },
+    {
+      "id": "v4-guerra-piu-breve",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Il 27 agosto 1896, tra il Regno Unito e il sultanato di Zanzibar, iniziò e finì un conflitto prima che a Londra facessero colazione.",
+      "kind": "story",
+      "title": "La guerra più breve della storia durò 38 minuti",
+      "hero_image_generated": "pause/hero/v4-guerra-piu-breve-0b6226e14f61.webp"
+    },
+    {
+      "id": "v4-effetto-zeigarnik",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Un messaggio non risposto, una serie interrotta sul cliffhanger, un lavoro incompleto: il cervello non li lascia andare. Ha un nome, ed è anche un trucco utile.",
+      "kind": "story",
+      "title": "Perché le cose lasciate a metà ti restano in testa",
+      "hero_image_generated": "pause/hero/v4-effetto-zeigarnik-21660044a2f8.webp"
+    },
+    {
+      "id": "v4-paradosso-scelta",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Ventiquattro marmellate vendono meno di sei. Più scelta sembra libertà, ma spesso è paralisi, e dopo la scelta arriva il rimpianto.",
+      "kind": "story",
+      "title": "Troppe opzioni ti rendono meno felice",
+      "hero_image_generated": "pause/hero/v4-paradosso-scelta-37855bde5d67.webp"
+    },
+    {
+      "id": "v4-effetto-spettatore",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Più persone assistono a un'emergenza, meno probabile è che qualcuno aiuti. Non per crudeltà: per un meccanismo che si può disinnescare con una frase.",
+      "kind": "story",
+      "title": "Perché in mezzo alla folla nessuno interviene",
+      "hero_image_generated": "pause/hero/v4-effetto-spettatore-0bc010912046.webp"
+    },
+    {
+      "id": "v4-pelle-oca",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Freddo, paura, un brano di musica che ti colpisce: la pelle si increspa. È un riflesso che aveva senso quando eravamo molto più pelosi.",
+      "kind": "story",
+      "title": "Perché ci viene la pelle d'oca (e a cosa serviva)",
+      "hero_image_generated": "pause/hero/v4-pelle-oca-c30c6de3698c.webp"
+    },
+    {
+      "id": "v4-stomaco-acido",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Dentro di te c'è un acido forte quanto quello delle batterie. E la domanda giusta non è come digerisce il cibo, ma perché non digerisce te.",
+      "kind": "story",
+      "title": "Il tuo stomaco potrebbe sciogliere una lametta",
+      "hero_image_generated": "pause/hero/v4-stomaco-acido-133956769066.webp"
+    },
+    {
+      "id": "v4-sbadiglio",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Non è per mancanza di ossigeno: quella teoria è stata smentita. Le ipotesi vere sono più interessanti e riguardano il cervello e l'empatia.",
+      "kind": "story",
+      "title": "Perché sbadigliamo (e perché è contagioso)",
+      "hero_image_generated": "pause/hero/v4-sbadiglio-aac5b73f6b12.webp"
+    },
+    {
+      "id": "v4-lez-osservare-uccelli",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Anche nel quartiere più cementificato vivono 20-30 specie. Impara a distinguerle con il metodo dei birdwatcher, senza binocolo.",
+      "kind": "lesson",
+      "title": "Riconoscere gli uccelli in città: il metodo in 4 passi",
+      "hero_image_generated": "pause/hero/v4-lez-osservare-uccelli-b9102736928c.webp"
+    },
+    {
+      "id": "v4-lez-incontro-fauna",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Un cinghiale al parco, una vipera sul sentiero, un cane sconosciuto: reagire male è la causa principale degli incidenti. Quattro regole valide quasi sempre.",
+      "kind": "lesson",
+      "title": "Cosa fare se incontri un animale selvatico",
+      "hero_image_generated": "pause/hero/v4-lez-incontro-fauna-e40f8e9b2167.webp"
+    },
+    {
+      "id": "v4-lez-leggere-mappa-storica",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Confini, nomi e colori raccontano il punto di vista di chi disegnava. Quattro passi per capire cosa una mappa mostra e cosa nasconde.",
+      "kind": "lesson",
+      "title": "Leggere una mappa storica senza farsi ingannare",
+      "hero_image_generated": "pause/hero/v4-lez-leggere-mappa-storica-a97bc297550c.webp"
+    },
+    {
+      "id": "v4-lez-fonti-primarie",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Un diario, un libro di scuola, un documentario: non valgono uguale. Sapere distinguerli è la prima abilità dello storico e serve anche a leggere le notizie.",
+      "kind": "lesson",
+      "title": "Fonte primaria o secondaria? Come capire di chi ti stai fidando",
+      "hero_image_generated": "pause/hero/v4-lez-fonti-primarie-2d8ec5d77421.webp"
+    },
+    {
+      "id": "v4-lez-abitudini",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Non è una questione di carattere: è un circuito del cervello che puoi progettare. Ecco il metodo che funziona secondo le ricerche.",
+      "kind": "lesson",
+      "title": "Costruire un'abitudine in 4 passi (e perché la forza di volontà non basta)",
+      "hero_image_generated": "pause/hero/v4-lez-abitudini-9f7d748d88d2.webp"
+    },
+    {
+      "id": "v4-lez-ascolto-attivo",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "La maggior parte delle discussioni non fallisce per quello che si dice, ma per quello che non si ascolta. Una tecnica in quattro passi usata da mediatori e terapeuti.",
+      "kind": "lesson",
+      "title": "Ascolto attivo: farsi capire ascoltando meglio",
+      "hero_image_generated": "pause/hero/v4-lez-ascolto-attivo-8158d20cf15c.webp"
+    },
+    {
+      "id": "v4-lez-leggere-battito",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Il polso è il dato di salute più facile da misurare e uno dei più informativi. Quattro passi per misurarlo bene e capire cosa significa.",
+      "kind": "lesson",
+      "title": "Leggere il proprio battito: cosa dice il cuore a riposo",
+      "hero_image_generated": "pause/hero/v4-lez-leggere-battito-c540ffd0401c.webp"
+    },
+    {
+      "id": "v4-lez-sonno-cicli",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Non conta solo quanto dormi, ma in che punto del ciclo ti svegli. Capire le fasi del sonno ti permette di svegliarti meglio con lo stesso tempo.",
+      "kind": "lesson",
+      "title": "I cicli del sonno: perché a volte 6 ore bastano e 8 no",
+      "hero_image_generated": "pause/hero/v4-lez-sonno-cicli-e626642d0b4d.webp"
+    },
+    {
+      "id": "v4-okay-origine",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Due lettere capite ovunque, da Tokyo a Buenos Aires. Nascono da uno scherzo ortografico su un giornale di Boston del 1839.",
+      "kind": "story",
+      "title": "Da dove viene la parola più usata al mondo: OK",
+      "hero_image_generated": "pause/hero/v4-okay-origine-d912a800bc5b.webp"
+    },
+    {
+      "id": "v4-tredici-sfortuna",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Grattacieli senza tredicesimo piano, aerei senza fila 13. Eppure in Italia il numero da temere è il 17 e in Cina il 4.",
+      "kind": "story",
+      "title": "Perché il 13 porta sfortuna (ma non ovunque)",
+      "hero_image_generated": "pause/hero/v4-tredici-sfortuna-851fa84b471c.webp"
+    },
+    {
+      "id": "v4-caffe-espresso",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Il caffè arrivò a Venezia dai turchi; il bar all'italiana lo inventò un ingegnere milanese infastidito dalle lunghe attese.",
+      "kind": "story",
+      "title": "Come l'Italia ha inventato l'espresso (e perché non è stata la prima con il caffè)",
+      "hero_image_generated": "pause/hero/v4-caffe-espresso-73cf3ba38ea2.webp"
+    },
+    {
+      "id": "v4-tulipani-bolla",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Nell'Olanda del 1637 un singolo bulbo poteva valere quanto una casa sui canali di Amsterdam. Poi, in una settimana, il crollo.",
+      "kind": "story",
+      "title": "La prima bolla finanziaria: un bulbo di tulipano per una casa",
+      "hero_image_generated": "pause/hero/v4-tulipani-bolla-1e64cbe566d1.webp"
+    },
+    {
+      "id": "v4-prezzi-99",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "9,99 invece di 10. Lo sappiamo tutti, eppure funziona ancora. E l'origine potrebbe non avere nulla a che fare con la psicologia.",
+      "kind": "story",
+      "title": "Perché i prezzi finiscono sempre con ,99",
+      "hero_image_generated": "pause/hero/v4-prezzi-99-68a72c2d0839.webp"
+    },
+    {
+      "id": "v4-banconote-valore",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Costa pochi centesimi stamparla e nessuno ti darà oro in cambio. Eppure ci fidiamo. Il denaro moderno regge su una sola cosa.",
+      "kind": "story",
+      "title": "Perché una banconota vale qualcosa se è solo carta",
+      "hero_image_generated": "pause/hero/v4-banconote-valore-838933afbda0.webp"
+    },
+    {
+      "id": "v4-lez-galateo-mondo",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Il pollice in su, la mancia, il silenzio a tavola: ciò che è cortese a Roma può essere offensivo a Tokyo. Un mini-corso per viaggiare senza gaffe.",
+      "kind": "lesson",
+      "title": "Buone maniere nel mondo: 4 gesti che cambiano significato",
+      "hero_image_generated": "pause/hero/v4-lez-galateo-mondo-48aa6bcc7e27.webp"
+    },
+    {
+      "id": "v4-lez-leggere-poesia",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Non si tratta di 'capire cosa voleva dire il poeta'. Si tratta di leggere lentamente e in modo diverso. Quattro passi che funzionano con Dante e con i testi delle canzoni.",
+      "kind": "lesson",
+      "title": "Come leggere una poesia senza sentirsi stupidi",
+      "hero_image_generated": "pause/hero/v4-lez-leggere-poesia-630980653e12.webp"
+    },
+    {
+      "id": "v4-lez-budget-50-30-20",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Non serve un foglio Excel con 40 categorie. Una regola semplice usata da milioni di persone per sapere dove finiscono i soldi ogni mese.",
+      "kind": "lesson",
+      "title": "Il budget 50/30/20: gestire lo stipendio in 4 passi",
+      "hero_image_generated": "pause/hero/v4-lez-budget-50-30-20-33bec1d66f55.webp"
+    },
+    {
+      "id": "v4-lez-leggere-busta-paga",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Tra ciò che costi all'azienda e ciò che arriva sul conto c'è quasi la metà. Quattro passi per capire le voci e controllare che tutto sia corretto.",
+      "kind": "lesson",
+      "title": "Leggere la busta paga: dove finiscono i soldi tra lordo e netto",
+      "hero_image_generated": "pause/hero/v4-lez-leggere-busta-paga-7e778aae2e93.webp"
+    },
+    {
+      "id": "v5-astronauti-alti",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Al rientro sulla Terra molti astronauti scoprono di essere cresciuti di qualche centimetro. Non è un mito: è la colonna vertebrale che si rilassa.",
+      "kind": "story",
+      "title": "Nello spazio gli astronauti diventano più alti",
+      "hero_image_generated": "pause/hero/v5-astronauti-alti-4f738d34716c.webp"
+    },
+    {
+      "id": "v5-pioggia-diamanti",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "A miliardi di chilometri dal Sole, dentro due pianeti color ghiaccio, il carbonio viene schiacciato fino a diventare la pietra più preziosa della Terra. E poi cade.",
+      "kind": "story",
+      "title": "Su Nettuno e Urano piovono diamanti",
+      "hero_image_generated": "pause/hero/v5-pioggia-diamanti-e9b4d97ea29b.webp"
+    },
+    {
+      "id": "v5-tempesta-giove",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "La Grande Macchia Rossa gira da quando la osservavano con i primi telescopi. Dentro ci starebbe il nostro pianeta intero, e non sappiamo ancora perché non si spegne.",
+      "kind": "story",
+      "title": "Su Giove c'è una tempesta più grande della Terra da almeno 350 anni",
+      "hero_image_generated": "pause/hero/v5-tempesta-giove-686da842e9a5.webp"
+    },
+    {
+      "id": "v5-qr-rovinato",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Un adesivo mezzo strappato, una macchia di caffè, un angolo piegato: il telefono lo legge lo stesso. Non è fortuna, è matematica progettata per fallire bene.",
+      "kind": "story",
+      "title": "Come fa un codice QR a funzionare anche se è graffiato o sporco?",
+      "hero_image_generated": "pause/hero/v5-qr-rovinato-f81fcf40f07b.webp"
+    },
+    {
+      "id": "v5-streaming-sgrana",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "La partita si trasforma in una poltiglia di quadrati, poi torna nitida. Non è il tuo schermo: è un compromesso che il servizio prende ogni due secondi.",
+      "kind": "story",
+      "title": "Perché il video in streaming a volte diventa sgranato per qualche secondo?",
+      "hero_image_generated": "pause/hero/v5-streaming-sgrana-16cd1c3830ca.webp"
+    },
+    {
+      "id": "v5-contactless",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Nessuna pila, nessun cavo, nessun interruttore. Eppure appoggiandola al lettore la carta calcola, firma e risponde in meno di mezzo secondo.",
+      "kind": "story",
+      "title": "Come fa la carta contactless a pagare senza batteria?",
+      "hero_image_generated": "pause/hero/v5-contactless-1678ab40e98c.webp"
+    },
+    {
+      "id": "v5-cuffie-rumore",
+      "category_name": "Tecnologia",
+      "hero_image": "",
+      "hook": "Indossi le cuffie in aereo e il rombo dei motori sparisce, senza che ci sia più gomma o imbottitura. Quel silenzio è un suono aggiunto, non tolto.",
+      "kind": "story",
+      "title": "Come fanno le cuffie a cancellare il rumore?",
+      "hero_image_generated": "pause/hero/v5-cuffie-rumore-725ad8191557.webp"
+    },
+    {
+      "id": "v5-lez-stati-materia",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Il ghiaccio si scioglie, l'acqua bolle, il vapore si condensa sul vetro. Dietro c'è una sola idea: quanto si agitano le molecole.",
+      "kind": "lesson",
+      "title": "Solido, liquido, gas: i passaggi di stato spiegati bene",
+      "hero_image_generated": "pause/hero/v5-lez-stati-materia-cff95ae00a11.webp"
+    },
+    {
+      "id": "v5-lez-reazione-chimica",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Sciogliere lo zucchero nel caffè e far cuocere un uovo sembrano cose simili. Solo una delle due è una reazione chimica. Ecco come distinguerle.",
+      "kind": "lesson",
+      "title": "Come riconoscere una reazione chimica: 4 segnali",
+      "hero_image_generated": "pause/hero/v5-lez-reazione-chimica-bf2539ae4037.webp"
+    },
+    {
+      "id": "v5-lez-pressione",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Una pentola con il coperchio bloccato, un fischio, e il bollito è pronto in venti minuti. Dietro c'è un concetto che spiega anche le orecchie tappate in aereo.",
+      "kind": "lesson",
+      "title": "La pressione: perché la pentola a pressione cucina in metà tempo",
+      "hero_image_generated": "pause/hero/v5-lez-pressione-67aecad14c5d.webp"
+    },
+    {
+      "id": "v5-lez-calore-temperatura",
+      "category_name": "Scienza",
+      "hero_image": "",
+      "hook": "Una scintilla a 1.000 gradi non ti brucia; una vasca a 60 sì. Se ti sembra un paradosso, è perché confondi due parole che usiamo come sinonimi.",
+      "kind": "lesson",
+      "title": "Calore e temperatura non sono la stessa cosa",
+      "hero_image_generated": "pause/hero/v5-lez-calore-temperatura-4e416485f3c0.webp"
+    },
+    {
+      "id": "v5-lez-eclissi",
+      "category_name": "Spazio",
+      "hero_image": "",
+      "hook": "Il Sole sparisce in pieno giorno, la Luna diventa rossa. Due spettacoli che i nostri antenati temevano e che oggi possiamo prevedere al secondo.",
+      "kind": "lesson",
+      "title": "Le eclissi: come nascono e perché non succedono ogni mese",
+      "hero_image_generated": "pause/hero/v5-lez-eclissi-bb3d8dea8265.webp"
+    },
+    {
+      "id": "v5-seme-germoglia",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Può restare nel terreno per anni, secco e apparentemente morto. Poi una primavera decide che è il momento. Chi glielo dice?",
+      "kind": "story",
+      "title": "Come fa un seme a sapere quando germogliare?",
+      "hero_image_generated": "pause/hero/v5-seme-germoglia-41ada298443d.webp"
+    },
+    {
+      "id": "v5-neve-bianca",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Un cubetto di ghiaccio lascia passare la luce. Un fiocco di neve è fatto della stessa cosa, eppure un prato nevicato abbaglia. Il segreto è nell'aria.",
+      "kind": "story",
+      "title": "Perché la neve è bianca se il ghiaccio è trasparente?",
+      "hero_image_generated": "pause/hero/v5-neve-bianca-7c77cf0f9328.webp"
+    },
+    {
+      "id": "v5-geyser",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Ogni novanta minuti, con la puntualità di un treno, una colonna d'acqua bollente sale a quaranta metri. Sotto c'è una pentola a pressione naturale grande come un palazzo.",
+      "kind": "story",
+      "title": "Come funziona un geyser?",
+      "hero_image_generated": "pause/hero/v5-geyser-28e07f72fa50.webp"
+    },
+    {
+      "id": "v5-fiori-notte",
+      "category_name": "Natura",
+      "hero_image": "",
+      "hook": "Tulipani, margherite e ninfee la sera abbassano le serrande. Non dormono: eseguono una strategia con un orologio interno preciso al minuto.",
+      "kind": "story",
+      "title": "Perché alcuni fiori si chiudono di notte?",
+      "hero_image_generated": "pause/hero/v5-fiori-notte-816211672514.webp"
+    },
+    {
+      "id": "v5-colibri",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Pesa quanto una moneta, vola all'indietro, e per non morire di fame ogni notte va in una specie di coma. È l'animale a sangue caldo più estremo che esista.",
+      "kind": "story",
+      "title": "Il colibrì: un cuore che batte 1.200 volte al minuto",
+      "hero_image_generated": "pause/hero/v5-colibri-9c650e695cec.webp"
+    },
+    {
+      "id": "v5-gatto-piedi",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Lasciato cadere a pancia in su, in meno di un secondo si è rigirato. Sembra violare la fisica: come si ruota in aria senza appoggiarsi a niente?",
+      "kind": "story",
+      "title": "Perché i gatti atterrano sempre in piedi?",
+      "hero_image_generated": "pause/hero/v5-gatto-piedi-35076d520da8.webp"
+    },
+    {
+      "id": "v5-formiche-capo",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Milioni di individui costruiscono città, coltivano funghi e fanno guerre organizzate. Nessuno dà ordini. La regina, in realtà, è solo una macchina per fare uova.",
+      "kind": "story",
+      "title": "Le formiche non hanno un capo (e la regina non comanda)",
+      "hero_image_generated": "pause/hero/v5-formiche-capo-f70d623bc841.webp"
+    },
+    {
+      "id": "v5-camaleonte",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "È la leggenda più diffusa del regno animale: si mimetizza con lo sfondo. In realtà cambia colore per parlare, per litigare e per regolare la temperatura. E lo fa con dei cristalli.",
+      "kind": "story",
+      "title": "Il camaleonte non cambia colore per nascondersi",
+      "hero_image_generated": "pause/hero/v5-camaleonte-c33139188000.webp"
+    },
+    {
+      "id": "v5-delfini-nome",
+      "category_name": "Animali",
+      "hero_image": "",
+      "hook": "Ogni delfino inventa da cucciolo un fischio che è solo suo. Gli altri lo imparano e lo usano per chiamarlo. Non è un modo di dire: è un nome.",
+      "kind": "story",
+      "title": "I delfini si chiamano per nome",
+      "hero_image_generated": "pause/hero/v5-delfini-nome-f78cd79c8d49.webp"
+    },
+    {
+      "id": "v5-dieci-giorni-persi",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Giovedì 4 ottobre 1582. Il giorno dopo era venerdì 15 ottobre. Nessuno dormì per undici giorni: fu un errore di calcolo vecchio di 1.600 anni che andava corretto.",
+      "kind": "story",
+      "title": "Nel 1582 sparirono dieci giorni dal calendario",
+      "hero_image_generated": "pause/hero/v5-dieci-giorni-persi-9677fd6cf958.webp"
+    },
+    {
+      "id": "v5-napoleone-basso",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Il 'complesso di Napoleone' è entrato nel linguaggio comune. Ma l'imperatore era alto quanto la media dei francesi dell'epoca, o più. L'equivoco nasce da un'unità di misura e dalla propaganda inglese.",
+      "kind": "story",
+      "title": "Napoleone non era basso",
+      "hero_image_generated": "pause/hero/v5-napoleone-basso-8123ca65cfeb.webp"
+    },
+    {
+      "id": "v5-anno-senza-estate",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Neve a giugno in New England, raccolti distrutti in Europa, carestie in Cina. La causa era un vulcano indonesiano di cui nessuno in Occidente aveva sentito parlare.",
+      "kind": "story",
+      "title": "Il 1816, l'anno senza estate",
+      "hero_image_generated": "pause/hero/v5-anno-senza-estate-f3b4b0e8f660.webp"
+    },
+    {
+      "id": "v5-quarantena-venezia",
+      "category_name": "Storia",
+      "hero_image": "",
+      "hook": "Una parola che abbiamo imparato a conoscere bene nasce nelle lagune del Trecento, quando nessuno sapeva cosa fosse un batterio ma tutti avevano capito una cosa: il contagio viaggiava con le navi.",
+      "kind": "story",
+      "title": "La quarantena fu inventata a Venezia, e durava davvero quaranta giorni",
+      "hero_image_generated": "pause/hero/v5-quarantena-venezia-d9cea23fbb35.webp"
+    },
+    {
+      "id": "v5-brividi-musica",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Un ritornello che entra, una voce che sale, e la pelle si accappona. Il cervello ti sta ricompensando come se avessi mangiato o vinto qualcosa. Ma solo se sa aspettare.",
+      "kind": "story",
+      "title": "Perché la musica ti fa venire i brividi?",
+      "hero_image_generated": "pause/hero/v5-brividi-musica-2000dd6098ae.webp"
+    },
+    {
+      "id": "v5-ricordi-flash",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Tutti ricordano con nitidezza dove si trovavano quando è accaduto un evento storico. Il ricordo è vivido, sicuro, dettagliato. E spesso falso.",
+      "kind": "story",
+      "title": "Ricordi esattamente dove eri quel giorno? Probabilmente sbagli",
+      "hero_image_generated": "pause/hero/v5-ricordi-flash-535435c3633b.webp"
+    },
+    {
+      "id": "v5-perche-ridiamo",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Ridi trenta volte di più in compagnia che da solo. E se registri le conversazioni, scopri che quasi nessuna risata segue qualcosa di divertente. La risata non è per le barzellette.",
+      "kind": "story",
+      "title": "Perché ridiamo (e quasi mai per una battuta)?",
+      "hero_image_generated": "pause/hero/v5-perche-ridiamo-17cafd3057fd.webp"
+    },
+    {
+      "id": "v5-ancoraggio",
+      "category_name": "Psicologia",
+      "hero_image": "",
+      "hook": "Se ti chiedono se Gandhi è morto prima o dopo i 140 anni, e poi quanti anni aveva, risponderai un numero più alto di chi ha sentito 'prima o dopo i 9 anni'. Anche se sai che entrambi sono assurdi.",
+      "kind": "story",
+      "title": "Il primo numero che senti decide quanto pagherai",
+      "hero_image_generated": "pause/hero/v5-ancoraggio-02a0a2896980.webp"
+    },
+    {
+      "id": "v5-dita-acqua",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Dopo un bagno lungo i polpastrelli sembrano prugne secche. Per un secolo si è pensato che la pelle assorbisse acqua. Invece è il sistema nervoso, e ha uno scopo.",
+      "kind": "story",
+      "title": "Perché le dita si arricciano nell'acqua?",
+      "hero_image_generated": "pause/hero/v5-dita-acqua-ea4123726ff7.webp"
+    },
+    {
+      "id": "v5-capelli-bianchi",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Non 'diventano' bianchi: nascono già così. E la paura, quella di cui parlano le leggende, ha davvero un ruolo, scoperto solo nel 2020.",
+      "kind": "story",
+      "title": "Perché i capelli diventano bianchi?",
+      "hero_image_generated": "pause/hero/v5-capelli-bianchi-593c54bcff9a.webp"
+    },
+    {
+      "id": "v5-fegato-rigenera",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Nel mito, Prometeo era punito con un'aquila che gli divorava il fegato ogni giorno, e ogni notte il fegato ricresceva. I greci ci avevano azzeccato.",
+      "kind": "story",
+      "title": "Il fegato ricresce: puoi donarne metà e riaverlo intero",
+      "hero_image_generated": "pause/hero/v5-fegato-rigenera-2b4b1358e7d9.webp"
+    },
+    {
+      "id": "v5-cuore-stanca",
+      "category_name": "Corpo umano",
+      "hero_image": "",
+      "hook": "Tre miliardi di battiti in una vita, senza un giorno di pausa. Se provi a stringere il pugno una volta al secondo, dopo dieci minuti smetti. Il cuore ha un altro tipo di muscolo.",
+      "kind": "story",
+      "title": "Perché il cuore non si stanca mai?",
+      "hero_image_generated": "pause/hero/v5-cuore-stanca-f2008f72722e.webp"
+    },
+    {
+      "id": "v5-applausi",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "In tutto il mondo, dal teatro allo stadio, il consenso si esprime allo stesso modo: mani che sbattono. Un gesto rumoroso, poco elegante, universale. E contagioso come uno sbadiglio.",
+      "kind": "story",
+      "title": "Perché battiamo le mani per dire che qualcosa ci è piaciuto?",
+      "hero_image_generated": "pause/hero/v5-applausi-1502157480fa.webp"
+    },
+    {
+      "id": "v5-pizza-margherita",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "La storia è perfetta: 1889, la regina Margherita a Napoli, il pizzaiolo Raffaele Esposito che crea una pizza tricolore in suo onore. Perfetta, e quasi certamente costruita a posteriori.",
+      "kind": "story",
+      "title": "La pizza Margherita non fu inventata per la regina",
+      "hero_image_generated": "pause/hero/v5-pizza-margherita-f297e7ea7b8d.webp"
+    },
+    {
+      "id": "v5-pollice-alzato",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "Nei film il pubblico decide con il pollice se il gladiatore vive o muore: su per la vita, giù per la morte. È una scena che i romani non avrebbero riconosciuto.",
+      "kind": "story",
+      "title": "Il pollice alzato non salvava i gladiatori",
+      "hero_image_generated": "pause/hero/v5-pollice-alzato-f08678d89f9f.webp"
+    },
+    {
+      "id": "v5-natale-25",
+      "category_name": "Cultura",
+      "hero_image": "",
+      "hook": "I Vangeli non dicono in che giorno nacque Gesù, e i primi cristiani non lo festeggiavano affatto. La data arrivò tre secoli dopo, e la scelta ha almeno due spiegazioni in competizione.",
+      "kind": "story",
+      "title": "Perché il Natale si festeggia il 25 dicembre?",
+      "hero_image_generated": "pause/hero/v5-natale-25-c542f04e6596.webp"
+    },
+    {
+      "id": "v5-diamanti-prezzo",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Un diamante da un carato costa migliaia di euro. Eppure i diamanti sono tra le gemme più comuni, e rivenderlo ti darà una frazione del prezzo. Il valore è stato costruito, con precisione, da una campagna pubblicitaria.",
+      "kind": "story",
+      "title": "Perché i diamanti costano così tanto se non sono rari?",
+      "hero_image_generated": "pause/hero/v5-diamanti-prezzo-02cad7f24f1f.webp"
+    },
+    {
+      "id": "v5-pietre-yap",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Su Yap, nel Pacifico, si pagava con dischi di calcare alti fino a quattro metri. Nessuno li spostava: cambiava solo chi ne era il proprietario. E una pietra caduta in fondo al mare valeva ancora.",
+      "kind": "story",
+      "title": "L'isola dove la moneta erano pietre da quattro tonnellate",
+      "hero_image_generated": "pause/hero/v5-pietre-yap-5b9905f6c5fa.webp"
+    },
+    {
+      "id": "v5-miglia-aeree",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Il programma fedeltà sembrava un premio per i clienti. È diventato una banca che stampa la propria moneta, e in alcuni casi vale più della compagnia che lo ha inventato.",
+      "kind": "story",
+      "title": "Le compagnie aeree guadagnano più vendendo miglia che biglietti",
+      "hero_image_generated": "pause/hero/v5-miglia-aeree-672d2a7df0f5.webp"
+    },
+    {
+      "id": "v5-latte-fondo",
+      "category_name": "Economia & Denaro",
+      "hero_image": "",
+      "hook": "Entri per il latte, esci con dodici cose. Non è mancanza di volontà: il percorso è stato progettato per questo, dal parcheggio alla cassa, con studi su come si muovono i clienti.",
+      "kind": "story",
+      "title": "Perché il latte è sempre in fondo al supermercato?",
+      "hero_image_generated": "pause/hero/v5-latte-fondo-18e2fae19a19.webp"
+    },
+    {
+      "id": "v5-blu-oltremare",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Nei quadri medievali e rinascimentali il manto della Madonna è quasi sempre blu. Non per simbolismo, o non solo: quel colore veniva da una sola montagna in Afghanistan e costava più del metallo prezioso.",
+      "kind": "story",
+      "title": "Il blu era più costoso dell'oro",
+      "hero_image_generated": "pause/hero/v5-blu-oltremare-7b6647bd2d8a.webp"
+    },
+    {
+      "id": "v5-ritratti-sorriso",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Secoli di volti seri, labbra serrate, sguardi fissi. Non era per i denti guasti né perché fosse impossibile tenere la posa. Sorridere, in un ritratto, era considerato volgare.",
+      "kind": "story",
+      "title": "Perché nei ritratti antichi nessuno sorride?",
+      "hero_image_generated": "pause/hero/v5-ritratti-sorriso-f279acdd6c70.webp"
+    },
+    {
+      "id": "v5-helvetica",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Metropolitana di New York, American Airlines, BMW, i moduli delle tasse americane, migliaia di loghi. Un solo alfabeto disegnato in Svizzera nel 1957 è diventato invisibile a forza di essere ovunque.",
+      "kind": "story",
+      "title": "Perché lo stesso carattere tipografico è su metà delle insegne del mondo?",
+      "hero_image_generated": "pause/hero/v5-helvetica-d791286b0eac.webp"
+    },
+    {
+      "id": "v5-david-proporzioni",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Guardato da vicino, il David ha una testa sproporzionata e mani enormi. Non è un errore del genio: la statua non era pensata per essere vista da vicino, né da terra.",
+      "kind": "story",
+      "title": "Il David di Michelangelo ha la testa e le mani troppo grandi, di proposito",
+      "hero_image_generated": "pause/hero/v5-david-proporzioni-669a67f90530.webp"
+    },
+    {
+      "id": "v5-van-gogh-vendette",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Oggi i suoi girasoli valgono centinaia di milioni. Nel 1890 morì convinto di essere un fallimento. La leggenda del genio incompreso è vera, ma la storia dei quadri venduti è più complicata.",
+      "kind": "story",
+      "title": "Van Gogh vendette un solo quadro in vita (forse)",
+      "hero_image_generated": "pause/hero/v5-van-gogh-vendette-e9c4ea31b236.webp"
+    },
+    {
+      "id": "v5-point-nemo",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Nel Pacifico c'è un punto dove le persone più vicine non sono su un'isola: sono in orbita, sulla Stazione Spaziale. E sul fondo giacciono centinaia di navicelle.",
+      "kind": "story",
+      "title": "Il punto della Terra più lontano da qualsiasi terra",
+      "hero_image_generated": "pause/hero/v5-point-nemo-dde933d06cec.webp"
+    },
+    {
+      "id": "v5-samoa-giorno",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Le Samoa sono andate a dormire giovedì 29 dicembre 2011 e si sono svegliate sabato 31. Il 30 dicembre non è mai esistito. Il motivo: fare affari con chi aveva un giorno di vantaggio.",
+      "kind": "story",
+      "title": "Il paese che ha cancellato un venerdì per cambiare fuso orario",
+      "hero_image_generated": "pause/hero/v5-samoa-giorno-791e08646462.webp"
+    },
+    {
+      "id": "v5-citta-piu-fredda",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "A Jakutsk, in Siberia, 350.000 persone vivono in un posto dove l'inverno medio è -40 e le auto restano accese per mesi. È la grande città più fredda del mondo, e ha regole tutte sue.",
+      "kind": "story",
+      "title": "La città dove a -50 gradi la scuola resta aperta",
+      "hero_image_generated": "pause/hero/v5-citta-piu-fredda-7e08b73e5e7d.webp"
+    },
+    {
+      "id": "v5-sahara-verde",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Sotto le dune ci sono letti di fiumi, fossili di pesci e pitture rupestri con mandrie e nuotatori. Fino a 5.000 anni fa il più grande deserto caldo del mondo era una savana. E tornerà a esserlo.",
+      "kind": "story",
+      "title": "Il Sahara era verde, con laghi e ippopotami",
+      "hero_image_generated": "pause/hero/v5-sahara-verde-0abb595bd288.webp"
+    },
+    {
+      "id": "v5-mediterraneo-secco",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Sei milioni di anni fa lo Stretto di Gibilterra si chiuse. Il mare evaporò lasciando un deserto di sale profondo tre chilometri. Poi l'Atlantico trovò una breccia, e arrivò la più grande inondazione della storia della Terra.",
+      "kind": "story",
+      "title": "Il Mediterraneo si è seccato completamente, e poi si è riempito in due anni",
+      "hero_image_generated": "pause/hero/v5-mediterraneo-secco-2936ec814b6c.webp"
+    },
+    {
+      "id": "v5-lez-guardare-quadro",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Il visitatore medio di un museo guarda un'opera per otto secondi, poi legge la targhetta per quindici. Invertire l'ordine e aggiungere tre domande cambia tutto.",
+      "kind": "lesson",
+      "title": "Come guardare un quadro: 4 passi per non passare oltre in 8 secondi",
+      "hero_image_generated": "pause/hero/v5-lez-guardare-quadro-819862daedfb.webp"
+    },
+    {
+      "id": "v5-lez-regola-terzi",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "La stessa scena, due foto: una piatta, una che funziona. Spesso la differenza è dove hai messo il soggetto. Una griglia di quattro linee ti fa decidere meglio.",
+      "kind": "lesson",
+      "title": "La regola dei terzi: comporre una foto o un'immagine in 4 mosse",
+      "hero_image_generated": "pause/hero/v5-lez-regola-terzi-6f0dacdceda2.webp"
+    },
+    {
+      "id": "v5-lez-scegliere-font",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Un invito in Comic Sans, un curriculum in Papyrus, un cartello con cinque caratteri diversi. Il testo era corretto, il messaggio è andato perso. La tipografia parla prima delle parole.",
+      "kind": "lesson",
+      "title": "Scegliere un carattere: 4 regole per non sbagliare font",
+      "hero_image_generated": "pause/hero/v5-lez-scegliere-font-82cb9e524046.webp"
+    },
+    {
+      "id": "v5-lez-storia-arte-tappe",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Dal Rinascimento all'astrattismo, la pittura occidentale ha cambiato completamente ciò che voleva fare. Con quattro punti di riferimento puoi collocare quasi ogni quadro che incontri.",
+      "kind": "lesson",
+      "title": "Cinquecento anni di pittura in 4 tappe",
+      "hero_image_generated": "pause/hero/v5-lez-storia-arte-tappe-921be81753ac.webp"
+    },
+    {
+      "id": "v5-lez-leggere-edificio",
+      "category_name": "Arte & Design",
+      "hero_image": "",
+      "hook": "Passeggiando in una città europea attraversi otto secoli di architettura senza accorgertene. Quattro indizi, finestre, colonne, decorazioni, materiali, ti dicono quando è stato costruito ciò che hai davanti.",
+      "kind": "lesson",
+      "title": "Leggere un edificio: riconoscere 4 stili architettonici in strada",
+      "hero_image_generated": "pause/hero/v5-lez-leggere-edificio-dd8e1d3029c4.webp"
+    },
+    {
+      "id": "v5-lez-coordinate",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "41.9028° N, 12.4964° E. Due numeri e un punto preciso sulla Terra, senza ambiguità. Il sistema ha 2.000 anni e funziona ancora meglio degli indirizzi.",
+      "kind": "lesson",
+      "title": "Latitudine e longitudine: leggere le coordinate in 4 passi",
+      "hero_image_generated": "pause/hero/v5-lez-coordinate-dc2933dbecf9.webp"
+    },
+    {
+      "id": "v5-lez-montagne",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Sulla cima del Monte Bianco ci sono rocce che erano fondali oceanici. Sull'Everest, fossili marini. Le montagne sono il risultato di uno scontro lentissimo che continua sotto i tuoi piedi.",
+      "kind": "lesson",
+      "title": "Come nascono le montagne (e perché le Alpi crescono ancora)",
+      "hero_image_generated": "pause/hero/v5-lez-montagne-89caa8015b3f.webp"
+    },
+    {
+      "id": "v5-lez-correnti-clima",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Roma e New York sono quasi alla stessa distanza dall'equatore. A gennaio Roma ha 8 gradi, New York zero e bufere di neve. La differenza non viene dal cielo: viene dal mare.",
+      "kind": "lesson",
+      "title": "Perché Roma e New York hanno inverni così diversi alla stessa latitudine",
+      "hero_image_generated": "pause/hero/v5-lez-correnti-clima-7ce05c49b096.webp"
+    },
+    {
+      "id": "v5-lez-jet-lag",
+      "category_name": "Geografia & Viaggi",
+      "hero_image": "",
+      "hook": "Sei ore di fuso e per una settimana ti svegli alle quattro di notte con la fame. Il tuo orologio interno si sposta di circa un'ora al giorno, ma puoi aiutarlo a fare più in fretta.",
+      "kind": "lesson",
+      "title": "Battere il jet lag: 4 passi prima, durante e dopo il volo",
+      "hero_image_generated": "pause/hero/v5-lez-jet-lag-dccc5deb3f57.webp"
+    },
+    {
+      "id": "v8-why-is-there-no-sound-in-space",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Nei film le esplosioni nello spazio fanno tremare tutto. Nella realtà, fuori da un veicolo, regna quasi il silenzio assoluto.",
+      "kind": "story",
+      "title": "Perché nello spazio non c'è suono?"
+    },
+    {
+      "id": "v8-how-do-stars-and-craters-get-their-names",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Nello spazio i nomi non si inventano a caso. Dietro una stella o un cratere c’è quasi sempre una regola, e spesso una storia sorprendente.",
+      "kind": "story",
+      "title": "Come si sceglie il nome di una stella o di un cratere?"
+    },
+    {
+      "id": "v8-what-happened-to-the-voyager-probes-beyond-the-solar-sys",
+      "category_name": "Spazio",
+      "hero_image": "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Lanciate nel 1977, le Voyager stanno ancora viaggiando nel buio. Ma che cosa trovano, ora che sono oltre i pianeti?",
+      "kind": "story",
+      "title": "Che cosa è successo alle sonde Voyager, oltre il Sistema Solare"
+    },
+    {
+      "id": "v8-why-does-the-colosseum-have-holes-in-its-walls",
+      "category_name": "Storia",
+      "hero_image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1200&q=80&auto=format&fit=crop",
+      "hook": "Sembrano ferite lasciate dal tempo, ma quei buchi raccontano una storia molto più concreta. E c’entrano ferro, terremoti e riuso.",
+      "kind": "story",
+      "title": "Perché il Colosseo ha i buchi nelle pareti?"
+    }
+  ],
+  "generated": [
+    {
+      "id": "volcanoes-basics",
+      "title": "Cosa c'è davvero dentro un vulcano?",
+      "prompt": "Photorealistic editorial cover photograph for an article titled 'Cosa c'è davvero dentro un vulcano?' (topic: Natura). Visual idea: Non è lava che ribolle in eterno. È un sistema idraulico enorme che collega la superficie al cuore della Terra. Show the concrete subject of the title, clearly recognisable. Vertical 3:4 composition, dark cinematic editorial mood, magazine-quality photography, moody premium lighting with subtle cyan/magenta rim light, ultra-detailed, one clear subject with realistic textures and natural anatomy, uncluttered background, keep the subject within the central safe area and leave dark negative space for the app title, no text, no letters, no logos, no watermark.",
+      "source_file": "backend/covers/volcanoes-basics.jpg",
+      "hero_image_generated": "pause/hero/volcanoes-basics-8f8d0b9a3d68.webp",
+      "hero_image_thumb": "pause/hero/volcanoes-basics-8f8d0b9a3d68-thumb.webp",
+      "hero_source_digest": "8f8d0b9a3d68",
+      "hero_bytes": {
+        "hero": 153728,
+        "thumb": 49888,
+        "source": 886505
+      },
+      "hero_generated_at": "2026-09-24T05:55:30.421076+00:00"
+    },
+    {
+      "id": "why-seasons",
+      "title": "Perché ci sono le stagioni?",
+      "prompt": "Photorealistic editorial cover photograph for an article titled 'Perché ci sono le stagioni?' (topic: Natura). Visual idea: Non è perché la Terra si avvicina al Sole. Il vero motivo è che il pianeta è storto. Show the concrete subject of the title, clearly recognisable. Vertical 3:4 composition, dark cinematic editorial mood, magazine-quality photography, moody premium lighting with subtle cyan/magenta rim light, ultra-detailed, one clear subject with realistic textures and natural anatomy, uncluttered background, keep the subject within the central safe area and leave dark negative space for the app title, no text, no letters, no logos, no watermark.",
+      "source_file": "backend/covers/why-seasons.jpg",
+      "hero_image_generated": "pause/hero/why-seasons-7641e12d06e4.webp",
+      "hero_image_thumb": "pause/hero/why-seasons-7641e12d06e4-thumb.webp",
+      "hero_source_digest": "7641e12d06e4",
+      "hero_bytes": {
+        "hero": 51404,
+        "thumb": 17040,
+        "source": 576908
+      },
+      "hero_generated_at": "2026-09-24T05:55:30.793202+00:00"
+    },
+    {
+      "id": "how-glaciers-move",
+      "title": "I ghiacciai si muovono davvero?",
+      "prompt": "Photorealistic editorial cover photograph for an article titled 'I ghiacciai si muovono davvero?' (topic: Natura). Visual idea: Sembrano statue di ghiaccio ferme, ma scendono a valle di metri all'anno. Ecco perché. Show the concrete subject of the title, clearly recognisable. Vertical 3:4 composition, dark cinematic editorial mood, magazine-quality photography, moody premium lighting with subtle cyan/magenta rim light, ultra-detailed, one clear subject with realistic textures and natural anatomy, uncluttered background, keep the subject within the central safe area and leave dark negative space for the app title, no text, no letters, no logos, no watermark.",
+      "source_file": "backend/covers/how-glaciers-move.jpg",
+      "hero_image_generated": "pause/hero/how-glaciers-move-8fd8374a6164.webp",
+      "hero_image_thumb": "pause/hero/how-glaciers-move-8fd8374a6164-thumb.webp",
+      "hero_source_digest": "8fd8374a6164",
+      "hero_bytes": {
+        "hero": 213988,
+        "thumb": 66118,
+        "source": 977580
+      },
+      "hero_generated_at": "2026-09-24T05:55:31.613129+00:00"
+    }
+  ],
+  "errors": [],
+  "ok": 3,
+  "fail": 0,
+  "skipped": 0,
+  "consecutive_failures": 0,
+  "stop_reason": null
+}

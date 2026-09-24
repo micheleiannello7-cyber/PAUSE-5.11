@@ -102,6 +102,28 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
+# Current cover-generation task (supersedes the older UI entries below):
+# User: "Una volta terminato, genera quante più copertine puoi con stessa qualità di quelle già esistenti, ho ricaricato la chiave api"
+# Confirmed: use available API credit for missing covers, preserve existing covers, TTS/Stripe off.
+# backend implemented / needs_retesting: generate_covers.py checkpointed batch, source originals
+# retained in covers/, same Nano Banana model, atomic no-overwrite DB writes, 3 portrait pilot
+# covers (volcanoes-basics, why-seasons, how-glaciers-move), remaining batch currently running.
+# Before: 437 stories, 132 generated covers + 47 photographic covers, 258 missing.
+# Run reports: memory/cover_batches/*.json (existing_covers snapshot, generated, errors, status).
+# Added optional_services.py API guard: TTS defaults off independently of image key; Stripe
+# already has no key and returns 503. No auth, frontend edits or runtime image generation.
+# Test focus: all completed new hero/thumb endpoints decode; existing 179 covers unchanged;
+# run --dry-run does not spend credits; lock prevents duplicate execution; portrait quality;
+# preview intro -> Home, new cover reader + scroll, old cover still visible; no TTS calls.
+# Screenshot smoke: 390x844 intro loaded; pilot images 896x1200 match existing originals.
+# No APIs mocked. Do not invoke real image generation during testing; inspect dry-run only.
+# FINAL: 194 new covers published; 373/437 covered; 64 missing. Budget stop honored.
+# Final pytest: 5/5 PASS, test_reports/pytest/cover_batch_final.xml. 388 new media
+# endpoints verified. All original179 preserved. Recovery (4 already-paid originals)
+# idempotent, no AI calls. Seed fallback overwrite fixed; TTS/Stripe intentionally off.
+# iteration_5 follow-up: test_reports/cover_batch_followup.md explains corrected test
+# baseline/process false positives. No unresolved scoped functional bugs.
+
 user_problem_statement: "Rifare da zero le icone categoria in stile 3D più semplice e meno invadente nella Home. Ultime richieste: più saturi, belli colorati; Animali sempre un bassotto."
 backend:
   - task: "Versioned colorful-3d-v3 category assets"

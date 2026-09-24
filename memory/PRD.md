@@ -258,3 +258,62 @@ Disabilitati per scelta utente: TTS reale e Stripe (codice presente).
 - Sostituzione totale del codice mantenendo i .env di framework.
 - TTS OpenAI e Stripe: lasciati disabilitati.
 - Ripristino cover eseguito all'avvio.
+
+## Sessione corrente — generazione massiva copertine PAUSE 5.0
+### Richiesta e autorizzazione
+- Utente: «Una volta terminato, genera quante più copertine puoi con stessa qualità di quelle già esistenti, ho ricaricato la chiave api».
+- Confermato l'uso del credito API disponibile per le sole copertine mancanti, senza
+  sovrascrivere quelle esistenti. Questa richiesta supera il precedente divieto di
+  generazione manuale; NON introduce generazione AI durante l'uso dell'app.
+- TTS e Stripe restano esclusi. Verificato che la vecchia configurazione consentiva
+  TTS con la chiave delle immagini: aggiunta guardia `optional_services.py` alle route
+  API, TTS disabilitato di default (`TTS_ENABLED` non impostato). Stripe senza chiave.
+
+### Risultato verificato
+- Prima: 437 contenuti, 132 copertine generate + 47 fotografiche, 258 mancanti.
+- **194 NUOVE copertine** pubblicate; totale **373/437** contenuti coperti
+  (326 generate + 47 fotografiche). **64** contenuti restano senza copertina.
+- Stesso generatore esistente Gemini Nano Banana `gemini-3.1-flash-image-preview`,
+  fotografia editoriale cinematografica scura, composizione verticale 896×1200.
+- Originali conservati in `backend/covers/`, hero WebP ≤1200px e miniature ≤600px
+  nell'Object Storage gestito, stessa qualità di codifica delle immagini precedenti.
+- Lotto interrotto automaticamente per **credito API esaurito**: nessun nuovo tentativo
+  a pagamento dopo il segnale. Due errori temporanei di upload recuperati da originali
+  già pagati; altre due immagini già generate recuperate dopo cambio dati allo startup.
+- Le **179 copertine preesistenti** sono preservate e confrontate via API coi riferimenti
+  salvati prima del lotto. Nessuna modifica al frontend, alle categorie o al lettore.
+
+### Implementazione e ripristino
+- `generate_covers.py`: lock anti-duplicazione, controllo prima della generazione e
+  compare-and-set MongoDB, validazione immagine verticale alta risoluzione, salvataggio
+  originale prima dell'upload, riuso dei file già prodotti, checkpoint JSON per lotto.
+- `memory/cover_batches/066aa39e04aa40cb9a0d227e74a7b845.json`: pilot 3, baseline179.
+- `memory/cover_batches/d92d8535d1c64580bd6fca5be540cc78.json`: lotto principale,
+  baseline182 (include il pilot), stopped/budget_or_quota. Contiene 187 successi
+  immediati + 4 recuperati (`recovered_ids`), per 191 immagini pubblicate nel lotto.
+  `fail` e `skipped` restano lo storico dei tentativi, NON il numero finale mancante.
+- `recover_cover_batch.py`: recupero idempotente degli originali dopo errori upload o
+  interruzioni; non importa né chiama il generatore AI, non modifica le cover iniziali.
+- `server.ensure_seed`: preserva anche `hero_image` con una cover generata. Evita che
+  al riavvio tornino le foto alternative precedentemente escluse dall'editorial review.
+- Per un futuro lotto autorizzato: `python generate_covers.py`; per vedere il numero
+  mancante SENZA spendere: `python generate_covers.py --dry-run` (attualmente64).
+- Non riavviare automaticamente la generazione. Non riattivare TTS/Stripe.
+
+### Verifica finale
+- Testing agent: `test_reports/iteration_5.json`, immagini reali nel lettore per
+  vulcano/polpo/stagioni; onboarding → Home; viewport390/320 senza overflow.
+- Due segnalazioni del report erano problemi di test: baseline del secondo lotto182
+  anziché iniziale179; ricerca processo non considerava `python -u`. Corrette.
+- Individuato e corretto il ripristino indesiderato di foto alternative dei nuovi
+  contenuti. Ripulite SOLO le alternative delle nuove cover, originali179 intatte.
+- Suite finale `backend/tests/test_iter29_cover_batch_regression.py`: **5/5 PASS**,
+  `test_reports/pytest/cover_batch_final.xml`. Verificati 388 endpoint media (194×2),
+  WebP/dimensioni, riferimenti originali, lock reale senza AI, TTS/Stripe503 e health200.
+- Recupero rieseguito senza nuove scritture o chiamate AI: sempre194 cover collegate.
+- Controllo visivo campione32 nuove immagini, oltre al pilot e alle schermate mobile.
+
+### Backlog
+- P0: nessun errore funzionale aperto nella generazione/visualizzazione verificata.
+- P1: le64 mancanti richiedono un futuro lotto con credito API disponibile e autorizzazione.
+- P2: verifica estetica dell'utente; TTS e Stripe soltanto su nuova richiesta esplicita.
