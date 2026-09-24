@@ -1,0 +1,43 @@
+{
+  "summary": "Frontend-only regression for the reader/cover redesign + Home tile cleanup. All 6 requested acceptance areas pass: Home tiles no longer expose count/hint testIDs and category selection toggles work; the reader shows a dedicated cover page with a single meta pill (reader-meta / reader-category-icon / reader-kind-label / reader-duration-label) and the full cover title; reader-header-title has computed opacity 0 at scroll top and animates to 1 once the cover title scrolls past; the intro block is below the fold at load (top y=784, vh=844) and its 'Leggi/Read' CTA (label='Read' in EN) becomes visible after scrolling; the deprecated reader-audio-corner testID is gone from source and DOM; premium user gets an 'Ascolta/Listen' CTA rendered via IntroCtaButton with an identical bounding box to Leggi (166x60 at 390px). Audio sheet opens on tap, closes via audio-sheet-close (removed from DOM), audio-mini-badge appears in the header and re-opens the sheet. No console errors. Chapter snapping/scrolling reaches the ReaderEnding card (Remember This + Continue button) at the bottom. No deprecated Expo packages detected in the touched files.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "reader header (/deep-dive)",
+        "issues": [
+          "audio-mini-badge bounding box (x=344,y=60,w=33,h=33) intersects the reader-header-title bounding box (x=36,y=18,w=318,h=48) by ~10px horizontally and ~6px vertically at 390px viewport when the title wraps to 2 lines. Visually the title text is centered and does not touch the badge, but the boxes DO overlap because the title container uses alignSelf:'stretch' spanning full width. Consider reserving right padding on the title (e.g. paddingRight: 44) when a corner is rendered, so bounding boxes never intersect. Reference: /app/frontend/src/components/reader-header.tsx (styles.title / styles.corner)."
+        ]
+      }
+    ],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/app/test_reports/discover_390.jpeg",
+    "/app/test_reports/discover_320.jpeg",
+    "/app/test_reports/reader_cover_390.jpeg",
+    "/app/test_reports/reader_intro_390.jpeg",
+    "/app/test_reports/audio_sheet.jpeg",
+    "/app/test_reports/reader_badge.jpeg",
+    "/app/test_reports/reader_bottom.jpeg",
+    "/app/test_reports/reader_320.jpeg"
+  ],
+  "action_items": [
+    "Optional polish: reserve right padding on reader-header-title (or clamp title max-width) when the AudioMiniBadge corner is rendered, so the two bounding boxes never intersect at 390px when the title wraps to 2 lines. Visual text is fine today; only bbox overlap.",
+    "Optional: expose a stable testID on the ReaderEnding container (e.g. testID='reader-ending') to make regression assertions easier. Today we verified visually via screenshot."
+  ],
+  "critical_code_review_comments": [
+    "intro-cta-button.tsx correctly uses expo-image with the same ART assets for 'book' and 'headphones' and identical minHeight=58 + shared flex:1 style from the parent (styles.cta), guaranteeing width/height parity of Leggi and Ascolta.",
+    "story-meta-chips.tsx (size='md') renders a single unified pill containing category-icon + kind + duration with all requested testIDs (reader-meta, reader-category-icon, reader-kind-label, reader-duration-label). Good.",
+    "reader-header.tsx animates opacity via the `reveal` shared value driven from deep-dive/[id].tsx CoverTitle onLayout + scrollY interpolate — verified via runtime opacity checks (0 -> 1)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a (skipped per request)", "frontend": "100% (all 6 acceptance groups pass; 1 minor design nit)"},
+  "seed_data_creation": "Toggled current anonymous user (c9a73f87-209f-4e51-9b0e-3999ac07d541) to premium via POST /api/user/premium (HTTP 200). No new seed content created.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Anonymous user id persists in localStorage key 'pause.user_id'. Onboarding always shows at '/', so go straight to /discover and /deep-dive/<id>. To exercise premium flow, curl POST /api/user/premium {user_id, active:true} then reload the reader. audio-mini-badge only appears after tapping deep-dive-listen-ai and closing the audio-sheet. Header title reveals only after scrolling past the big cover title (~coverH). Screenshots for this iteration are in /app/test_reports/*.jpeg.",
+  "rca_of_issue": "N/A — no functional bugs. The only observation is a purely geometric bounding-box overlap between the audio-mini-badge (positioned absolute right/bottom inside the header) and the header title's stretched container. Because the title uses alignSelf:'stretch' + textAlign:'center', the flex container spans the full row width even though the glyphs are centered and narrow. Fix idea: add paddingRight (or a right margin equal to badge width + spacing) to styles.title when a corner is present, or wrap the title in a View with maxWidth: winW - 2*(badgeWidth+spacing)."
+}

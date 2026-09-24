@@ -1,0 +1,174 @@
+{
+  "project": "PAUSE Mobile Expo App - Category 3D Artwork Remake & UI Framing",
+  "version": "1.0.0",
+  "final_user_revision": {
+    "takes_precedence_over_initial_muted_palette": true,
+    "user_requests": ["falli piu saturi, devono essere belli colorati", "nella categoria animali sempe un bassotto"],
+    "implemented_direction": "Simple matte 3D objects with saturated lively colors, without neon glow or busy scenery. Animali is a long-bodied short-legged dachshund, never a fox. Family colorful-3d-v3; quiet neutral tile framing."
+  },
+  "context": "mobile_web_app",
+  "instructions_to_main_agent": [
+    "Follow this art direction and framing specification strictly for regenerating the 3D category artwork set from scratch and integrating it cleanly into the PAUSE Home and Topic Picker.",
+    "Do not perform a general redesign of the app. Only update category artwork assets, artwork manifests, and minimal styling tweaks on CategoryArtwork, HomeCategoryTile, and CategoryGrid.",
+    "Preserve 3D tactile character (matte porcelain / frosted glass / soft studio clay) while stripping out noisy neon light spills, hyper-saturated multi-colored glows, complex miniature dioramas, and competing high-contrast backgrounds.",
+    "Ensure each category has exactly ONE single iconic, centered hero subject instantly legible at 32px-48px size inside a ~68px tile.",
+    "All interactive elements and test IDs must be preserved. Ensure testID convention is retained."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "anti_ai_slop": "Avoid neon candy gloss, radioactive rim lighting, noisy volumetric fog, and microscopic clutter. Prioritize monolithic sculptural clarity, calm matte textures, and tonal consistency.",
+    "visual_hierarchy": "In Home, the carousel story card is the protagonist. Category tiles must be calm secondary navigational anchors, not competing neon billboards.",
+    "contrast_and_accessibility": "Tile labels must maintain WCAG AA contrast against the card surface. The image subject must sit in the upper half/center with subtle vignette fading into the tile background to never obscure category text.",
+    "test_attributes": "Keep all data-testid and testID props intact on tiles, images, fallback icons, and badges."
+  },
+  "design_problem_analysis": {
+    "user_feedback": "User stated: 'ora partendo da queste, rendile meno sgargianti ed un po' piu semplici, meno d impatto nella home. ma comuqnue cosi' and 'no, rifalle da zero che stiano meglio nella home, non so come spiegarti, queste rubano troppo l attenzione'.",
+    "root_cause": "Existing illustrations have hyper-saturated colors, intense contrasting glows, high-detail multi-element dioramas, and stark lighting contrast that clash with and pull focus away from the main story carousel cards in Home.",
+    "required_solution": "Remake the 12 categories + 1 'all' banner from scratch as cohesive 3D objects with unified lighting, soft architectural studio environment, muted refined palette, single recognizable iconic focal point per tile, and softened card surface framing."
+  },
+  "art_direction_and_3d_style": {
+    "aesthetic_philosophy": "Sculptural Tactile Minimalism (Dieter Rams meets modern Scandinavian 3D product rendering)",
+    "materials_and_surfaces": {
+      "primary_material": "Matte soft-touch ceramic / fine-grain bisque porcelain (specular roughness 0.65 - 0.75)",
+      "secondary_accent": "Frosted satin glass / translucent smoked quartz (translucency 35%, subtle inner diffusion, no harsh caustics)",
+      "accent_metal": "Brushed warm titanium or matte anodized aluminium for delicate connecting elements"
+    },
+    "lighting_and_atmosphere": {
+      "key_light": "Diffused softbox from top-left (45 degrees, warm white 4800K, softness 0.8)",
+      "fill_light": "Low-intensity bounce from bottom-right (cool ambient tint, 15% intensity)",
+      "rim_light": "Subtle 1px micro-rim edge separation only; strictly NO neon rainbow halo or blinding backlights",
+      "shadows": "Very soft ambient occlusion underneath the base; no harsh cast drop shadows",
+      "background_environment": "Deep neutral obsidian dark slate (#080B14 to #0D111D) vignette seamlessly blending into app surface token colors.artworkSurface (#05070C)"
+    },
+    "color_palette_tuning": {
+      "saturation_cap": "Muted to 40% - 55% max saturation. Tones should be sophisticated mineral / botanical shades rather than saturated neon primaries.",
+      "category_accents": {
+        "scienza": "#5EB0E5 (subtle cerulean blue)",
+        "spazio": "#8C7AE6 (calm cosmic periwinkle)",
+        "tecnologia": "#38B2AC (refined muted cyan/teal)",
+        "natura": "#48BB78 (earthen sage / moss green)",
+        "animali": "#ED8936 (warm terracotta amber)",
+        "storia": "#D69E2E (antique parchment ochre / bronze)",
+        "psicologia": "#9F7AEA (soft meditative amethyst)",
+        "corpo-umano": "#E53E3E (muted coral crimson)",
+        "cultura": "#DD6B20 (warm terracotta / clay)",
+        "curiosita": "#ED64A6 (subtle dusty rose / orchid)",
+        "economia": "#319795 (steely jade teal)",
+        "arte": "#D53F8C (soft plum / dusted magenta)",
+        "geografia": "#3182CE (slate lapis blue)",
+        "all": "#4FD1C5 (balanced prismatic glass prism on obsidian)"
+      }
+    }
+  },
+  "category_subjects_and_prompts": {
+    "scienza": {
+      "subject": "Minimalist Erlenmeyer flask with glowing calibrated liquid meniscus or stylized 3D Bohr atom with two sleek orbital rings",
+      "prompt": "Isolated 3D icon of a minimalist laboratory flask, smooth matte white ceramic with translucent frosted blue liquid inside, soft studio lighting, deep dark slate navy background, simple iconic silhouette, octane render, 8k, centered, clean framing, non-busy",
+      "scale_at_tiny_size": "Flask neck and bulb form high-contrast recognizable profile at 36px"
+    },
+    "spazio": {
+      "subject": "Smooth stylized Saturn planet with clean thin tilted ring",
+      "prompt": "Isolated 3D icon of a stylized smooth planet with a single elegant tilted ring, muted periwinkle and soft lavender tones, matte porcelain texture, gentle rim light, centered on dark void background, calm atmospheric studio render, minimal, clean edges",
+      "scale_at_tiny_size": "Ring and sphere silhouette stands out immediately"
+    },
+    "tecnologia": {
+      "subject": "Geometric microchip prism with etched subtle circuit lines and central core cube",
+      "prompt": "Isolated 3D icon of a modern geometric computing chip, rounded corners, matte dark titanium with soft cyan accent line tracing, clean minimalist hardware artifact, dark slate backdrop, soft diffused lighting, no neon flare, iconic tech symbol",
+      "scale_at_tiny_size": "Clear square wafer and central embossed core"
+    },
+    "natura": {
+      "subject": "Sculptural Monstera or fiddle leaf shoot in a smooth rounded ceramic pebble base",
+      "prompt": "Isolated 3D icon of a single stylized botanical leaf shoot, matte sage green ceramic surface, smooth sculptural folds, resting on a small smooth dark pebble, soft diffused warm light, deep dark background, peaceful biophilic design, uncluttered",
+      "scale_at_tiny_size": "Organic leaf contour clearly distinct from geometric tech tiles"
+    },
+    "animali": {
+      "subject": "Stylized origami-inspired porcelain fox or graceful resting bird silhouette",
+      "prompt": "Isolated 3D sculpture of a stylized geometric fox sitting peacefully, smooth warm terracotta-amber matte finish, rounded modern low-poly curves, clean single focal subject, dark studio backdrop, soft studio shadow, no clutter",
+      "scale_at_tiny_size": "Recognizable animal head and curled tail outline"
+    },
+    "storia": {
+      "subject": "Sculptural Classical Ionic pillar capital or ancient sundial obelisk",
+      "prompt": "Isolated 3D icon of a miniature classical architectural Ionic column capital, carved antique warm limestone texture, clean geometric scrolls, centered, soft top-left directional museum lighting, dark slate background, timeless archaeological symbol",
+      "scale_at_tiny_size": "Distinctive column scroll volutes"
+    },
+    "psicologia": {
+      "subject": "Abstract hollow profile bust with gentle inner glowing sphere (the mindful mind)",
+      "prompt": "Isolated 3D icon of an abstract minimalist human head silhouette in profile, carved from matte smoke-grey porcelain, holding a soft glowing amethyst pearl inside, serene psychological concept, dark background, gentle studio light, clean",
+      "scale_at_tiny_size": "Clear head profile silhouette"
+    },
+    "corpo-umano": {
+      "subject": "Stylized anatomic heart sculpture or dual-helix DNA ribbon in smooth matte coral",
+      "prompt": "Isolated 3D icon of a stylized minimalist anatomical heart, sculpted from smooth coral-red matte polymer, simplified geometric chambers, soft ambient lighting, clean medical design, centered on dark slate surface, peaceful and elegant",
+      "scale_at_tiny_size": "Distinct heart silhouette without medical gore"
+    },
+    "cultura": {
+      "subject": "Classical Greek tragedy-comedy mask fused into single elegant modern bronze relief",
+      "prompt": "Isolated 3D icon of a minimalist theatrical mask or open classical book with arched portal, warm matte clay terracotta, smooth sculptural curves, dark background, soft rim lighting, timeless humanities motif, uncluttered",
+      "scale_at_tiny_size": "Arched brows and mask mouth or open volume"
+    },
+    "curiosita": {
+      "subject": "Smooth crystal keyhole box or floating question mark enveloped in a soft orb",
+      "prompt": "Isolated 3D icon of a smooth floating question mark made of frosted dusted rose glass inside a subtle hollow ceramic sphere, soft ambient glow, minimal curious artifact, centered on dark slate void, subtle clean composition",
+      "scale_at_tiny_size": "Iconic glyph centered inside round capsule"
+    },
+    "economia": {
+      "subject": "Tiered architectural coin vault column or balanced tactile balance stone",
+      "prompt": "Isolated 3D icon of three thick stylized coins stacked as an architectural pedestal with a clean upward arrow curve, matte brushed brass and deep jade teal, soft studio lighting, dark navy background, minimal fintech sculpture",
+      "scale_at_tiny_size": "Stepped discs provide unmistakable economic shape"
+    },
+    "arte": {
+      "subject": "Classic artist palette with three sculpted paint wells or sculptural Möbius ribbon",
+      "prompt": "Isolated 3D icon of a sleek curved artist palette with three neat paint drop wells, matte white ceramic with muted plum and gold pigment dots, clean tactile art tool, centered, dark backdrop, soft diffuse shadows, elegant",
+      "scale_at_tiny_size": "Thumb hole and curved palette contour"
+    },
+    "geografia": {
+      "subject": "Stylized topographic globe sphere with embossed continents on an elegant tilted stand",
+      "prompt": "Isolated 3D icon of a minimalist desktop globe on a thin matte titanium axis, continents cleanly raised on a deep slate-blue sphere, muted earth tones, soft cinematic rim light, dark background, precise cartographic object",
+      "scale_at_tiny_size": "Spherical ring-axis silhouette"
+    },
+    "all": {
+      "subject": "Prismatic crystal polyhedron reflecting subtle spectrum rays onto dark granite base",
+      "prompt": "Wide horizontal banner 3D artwork, faceted frosted optical prism cube on a dark obsidian surface, soft prismatic color refraction on right side, smooth dark fade to left, calm premium exploratory aesthetic, uncluttered, 8k",
+      "scale_at_tiny_size": "Wide horizontal layout with clear visual gravity on right 30%"
+    }
+  },
+  "ui_framing_and_home_integration_adjustments": {
+    "goal": "Dramatically lower visual noise in Home without changing structural layout or breaking 3-column topic grid",
+    "home_controls_js": {
+      "component": "HomeCategoryTile",
+      "tile_container": {
+        "border_color_default": "colors.glassBorder (change from glassBorderStrong to soften outline)",
+        "border_color_active": "cat.color",
+        "background_active": "cat.color + '12' (reduced from '18' to keep it serene)",
+        "elevation_and_shadow": "Remove aggressive drop shadows; use 1px subtle crisp border"
+      },
+      "label_typography": {
+        "fontSize": 10,
+        "letterSpacing": 0.2,
+        "opacity": 0.88,
+        "lineHeight": 13
+      }
+    },
+    "category_artwork_js": {
+      "component": "CategoryArtwork",
+      "image_containment": {
+        "compact_image_scale": "left: '10%', width: '80%', top: 2 (centers the artwork with comfortable negative space margin)",
+        "image_aspect_ratio": 1,
+        "gradient_vignette": "Ensure bottom gradient overlay has [0, 0.40, 0.78, 1] locations fading to colors.artworkSurface so the lower half of the tile remains dark and peaceful for the text label",
+        "wide_banner_glow": "Tame the bannerGlow opacity from 0.75 down to 0.35 and blur from 44px to 24px so the banner does not beam light across the screen"
+      }
+    },
+    "category_grid_js": {
+      "component": "CategoryGrid",
+      "tile_framing": {
+        "maintain_3_column_grid": true,
+        "tile_aspect_ratio": 0.86,
+        "mini_badge": "Tone down the icon miniBadge border from 1.5 to 1.0 and soften background opacity"
+      }
+    }
+  },
+  "asset_generation_pipeline": {
+    "recommended_method": "Generate individual 512x512 square assets (PNG/JPEG) with consistent dark slate background (#080B14) or contact sheet grid for unified lighting coherence.",
+    "compression_and_delivery": "Compress to WebP or progressive JPEG (~30KB-50KB each). Update category_art_sources_v3.json and reference in category-artwork.tsx under ART_VERSION = 'glass-2026-10-v3'.",
+    "fallback_protection": "Preserve existing CategoryIcon SVG line family as automatic instant fallback during image load or offline network conditions."
+  }
+}
